@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Times Study Abroad Conclave 2026 - Choose the Right Future</title>
+    <title>Times Study Abroad Conclave - Choose the Right Future</title>
     <meta name="description" content="India’s most credible platform for global education discovery. Bring truth, transparency, and career-first guidance into global education decisions.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -44,9 +44,19 @@
         </div>
         <div class="hero-container">
             <div class="hero-content glass-panel editorial-theme">
-                <span class="badge">Times Study Abroad Conclave 2026</span>
+                <span class="badge">Times Study Abroad Conclave</span>
                 <h1>Don’t Just Choose a Country. Choose the Right Future.</h1>
                 <p>India’s most credible platform for global education discovery — where students, parents, and experts come together to make informed, future-ready decisions.</p>
+                
+                <div class="event-meta-banner glass-card mt-2 mb-2 p-2" style="text-align: left; background: rgba(255,255,255,0.9);">
+                    <div class="grid-two" style="gap: 1rem;">
+                        <div><strong>📅 Date:</strong> 4th July</div>
+                        <div><strong>⏰ Time:</strong> 09:00 AM - 05:30 PM</div>
+                        <div><strong>📍 Venue:</strong> Shangri La Eros, New Delhi</div>
+                        <div><strong>🎟️ Entry:</strong> Free Registration (Opens 10th April)</div>
+                    </div>
+                </div>
+
                 <div class="supporting-line">Summit · Expo · Masterclasses · Awards</div>
                 <div class="cta-group">
                     <a href="#register" class="btn btn-gradient">👉 Register Now</a>
@@ -81,7 +91,7 @@
     <section id="about" class="section-padding solution-section fade-in-up">
         <div class="container center-text max-800">
             <span class="badge">Introducing</span>
-            <h2>Times Study Abroad Conclave 2026</h2>
+            <h2>Times Study Abroad Conclave</h2>
             <p class="large-text">A first-of-its-kind platform designed to bring <strong>truth, transparency, and career-first guidance</strong> into global education decisions.</p>
             <p class="reinforce-text">Where aspiration meets verified opportunity.<br><strong>Where information becomes decision.</strong></p>
         </div>
@@ -270,19 +280,89 @@
         </div>
     </section>
 
-    <!-- 9. Urgency & 11. Final CTA Section -->
-    <section id="register" class="section-padding urgency-section fade-in-up center-text">
+    <!-- Registration Section -->
+    <section id="register" class="section-padding urgency-section fade-in-up">
         <div class="container max-800 glass-card p-4">
-            <span class="badge">Limited Seats</span>
-            <h2>Serious decisions need the right environment</h2>
-            <p>Seats are limited to ensure meaningful interaction, not overcrowding. Each attendee gets access to structured sessions and expert guidance.</p>
+            <div class="center-text">
+                <span class="badge">Registrations Open 10th April</span>
+                <h2>Secure Your Free Seat</h2>
+                <p class="mb-3">Registration is free but mandatory. Please fill in your details below to confirm your presence at the Times Study Abroad Conclave.</p>
+            </div>
             
-            <div class="divider mt-3 mb-3"></div>
-            
-            <h2>Your global future deserves better guidance</h2>
-            <p class="mb-3">Don’t rely on fragmented advice, online noise, or guesswork. Make one informed decision that shapes your entire future.</p>
-            <a href="#register" class="btn btn-gradient btn-large">👉 Register Now</a>
-            <p class="mt-1"><small>Registration is free but mandatory.</small></p>
+            <form id="registration-form" class="registration-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name *</label>
+                        <input type="text" id="reg-name" required placeholder="Enter your full name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="reg-phone">Phone Number *</label>
+                        <input type="tel" id="reg-phone" required placeholder="Enter your phone number" class="form-control">
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label for="reg-email">Email Address *</label>
+                        <input type="email" id="reg-email" required placeholder="Enter your email address" class="form-control">
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label>Who are you registering as? *</label>
+                        <div class="radio-group mt-1">
+                            <label class="radio-label">
+                                <input type="radio" name="profile_type" value="student" checked>
+                                <span>Student</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="profile_type" value="professional">
+                                <span>Professional</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Fields -->
+                <div id="student-fields" class="form-grid profile-specific-fields active">
+                    <div class="form-group">
+                        <label for="student-institute">Institute Name *</label>
+                        <input type="text" id="student-institute" placeholder="Where do you study?" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-stream">Stream / Course *</label>
+                        <input type="text" id="student-stream" placeholder="e.g. Science, B.Tech" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-graduation">Graduation Year *</label>
+                        <input type="text" id="student-graduation" placeholder="e.g. 2026" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-city">Current City *</label>
+                        <input type="text" id="student-city" placeholder="Your current city" class="form-control" required>
+                    </div>
+                </div>
+
+                <!-- Professional Fields -->
+                <div id="professional-fields" class="form-grid profile-specific-fields">
+                    <div class="form-group">
+                        <label for="prof-org">Organisation Name *</label>
+                        <input type="text" id="prof-org" placeholder="Where do you work?" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="prof-industry">Industry *</label>
+                        <input type="text" id="prof-industry" placeholder="e.g. IT, Finance" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="prof-exp">Total Years of Experience *</label>
+                        <input type="text" id="prof-exp" placeholder="e.g. 3 Years" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="prof-city">Current City *</label>
+                        <input type="text" id="prof-city" placeholder="Your current city" class="form-control">
+                    </div>
+                </div>
+
+                <div class="center-text mt-3">
+                    <button type="submit" class="btn btn-gradient btn-large full-width" style="font-size: 1.25rem;">Submit Registration</button>
+                    <p class="mt-1"><small>By registering, you agree to our terms and conditions.</small></p>
+                </div>
+            </form>
         </div>
     </section>
 

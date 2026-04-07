@@ -109,4 +109,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         footerObserver.observe(footer);
     }
+
+    /* =========================================
+       Registration Form Logic
+       ========================================= */
+    const profileRadios = document.querySelectorAll('input[name="profile_type"]');
+    const studentFields = document.getElementById('student-fields');
+    const professionalFields = document.getElementById('professional-fields');
+
+    if (profileRadios.length > 0 && studentFields && professionalFields) {
+        const toggleRequired = (activeSection, inactiveSection) => {
+            activeSection.querySelectorAll('input').forEach(input => input.setAttribute('required', 'true'));
+            inactiveSection.querySelectorAll('input').forEach(input => input.removeAttribute('required'));
+        };
+
+        // Initial setup
+        toggleRequired(studentFields, professionalFields);
+
+        profileRadios.forEach(radio => {
+            radio.addEventListener('change', (e) => {
+                if (e.target.value === 'student') {
+                    studentFields.classList.add('active');
+                    professionalFields.classList.remove('active');
+                    toggleRequired(studentFields, professionalFields);
+                } else if (e.target.value === 'professional') {
+                    professionalFields.classList.add('active');
+                    studentFields.classList.remove('active');
+                    toggleRequired(professionalFields, studentFields);
+                }
+            });
+        });
+        
+        const regForm = document.getElementById('registration-form');
+        if(regForm) {
+            regForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert("Thank you for registering for the Times Study Abroad Conclave! See you on 4th July at Shangri La Eros, New Delhi.");
+                regForm.reset();
+                studentFields.classList.add('active');
+                professionalFields.classList.remove('active');
+            });
+        }
+    }
 });

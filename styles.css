@@ -30,6 +30,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -61,7 +62,7 @@ body {
 .p-3 { padding: 3rem; }
 .p-4 { padding: 4rem; }
 
-.section-padding { padding: 5rem 5%; }
+.section-padding { padding: 3rem 5%; }
 
 /* =========================================
    Glassmorphism Utilities
@@ -178,6 +179,27 @@ p { margin-bottom: 1rem; color: var(--text-light); font-size: 1.1rem; }
 .logo { font-size: 1.6rem; font-weight: 800; color: var(--text-dark); letter-spacing: -0.03em;}
 .logo span { color: var(--primary-color); }
 
+.nav-hashtag {
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end), #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% 200%;
+    cursor: default;
+    transition: transform 0.3s ease;
+}
+.nav-hashtag:hover {
+    animation: shimmer 1.5s ease infinite;
+    transform: scale(1.05);
+}
+@keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; font-size: 0.95rem; transition: color 0.3s; }
 .nav-links a:hover { color: var(--primary-color); }
@@ -421,5 +443,6 @@ p { margin-bottom: 1rem; color: var(--text-light); font-size: 1.1rem; }
     .footer-content { flex-direction: column; text-align: center; }
     .cta-group { flex-direction: column; }
     .floating-cta { display: block; } /* Show sticky CTA on mobile */
-    .section-padding { padding: 3rem 5%; }
+    .section-padding { padding: 2rem 5%; }
+    .audience-card { width: calc(50% - 0.5rem); }
 }

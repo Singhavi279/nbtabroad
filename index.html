@@ -19,25 +19,17 @@
         <div class="logo"><img
                 src="https://static.langimg.com/thumb/119164302/navbharat-times.jpg?width=366&resizemode=4"
                 alt="Navbharat Times" style="max-height: 45px; vertical-align: middle;"></div>
+
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#attendees">Who Should Attend</a></li>
-            <li><a href="#partners">B2B Partners</a></li>
+            <li><a href="#event-snapshot">Event Snapshot</a></li>
+            <li><a href="#tracks">Conversation Tracks</a></li>
+            <li><a href="#attendees">Attend</a></li>
+            <li><a href="#partners">Partner</a></li>
+            <li><a href="#faq">FAQs</a></li>
         </ul>
-        <a href="#register" class="btn btn-primary nav-cta">Register Now</a>
+        <button onclick="openModal()" class="btn btn-primary nav-cta">Register Now</button>
     </nav>
 
-    <!-- Sticky Footer CTA -->
-    <div class="sticky-footer-cta glass"
-        style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1000; padding: 0.8rem 5%; box-shadow: 0 -5px 15px rgba(0,0,0,0.05);">
-        <div class="container"
-            style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
-            <div style="font-weight: 700; font-size: 1.2rem; color: var(--text-dark);">Fly High, Aim Higher, Study
-                Abroad</div>
-            <a href="#register" class="btn btn-gradient" style="white-space: nowrap;">Register Now</a>
-        </div>
-    </div>
 
     <!-- Exit Intent Popup -->
     <div id="exit-popup" class="popup-overlay">
@@ -45,34 +37,37 @@
             <span class="close-popup">&times;</span>
             <h2>Still unsure?</h2>
             <p>Don't just choose a country. Choose the right future. Get absolute clarity at the conclave.</p>
-            <a href="#register" class="btn btn-gradient full-width" id="btn-close-popup">Register for Free</a>
+            <button onclick="openModal()" class="btn btn-gradient full-width" id="btn-close-popup">Register for
+                Free</button>
         </div>
     </div>
 
     <!-- 1. Hero Section -->
     <section id="hero" class="hero fade-in-up">
         <div class="hero-bg">
-            <img src="assets/hero_students_globe.png" alt="Times Study Abroad Conclave">
+            <img src="assets/hero_indian_students.png" alt="Indian students at foreign university"
+                style="object-position: right center;">
         </div>
         <div class="hero-container">
-            <div class="hero-content glass-panel editorial-theme">
-                <span class="badge">Fly High, Aim Higher, Study Abroad</span>
-                <h1>Times Study Abroad Conclave</h1>
-                <p>India's most credible platform for global education discovery — where students, parents, and experts
+            <div class="hero-content glass-panel editorial-theme" style="position: relative;">
+                <span class="nav-hashtag" style="position: absolute; top: 1.5rem; right: 2rem;">#TimesStudyAbroad</span>
+                <h1 style="margin-bottom: 1rem; line-height: 1.2;">
+                    <span style="display: block; font-size: 2.8rem; font-weight: 800; color: #0f172a;">Times</span>
+                    <span
+                        style="display: block; font-size: 3.8rem; font-weight: 700; color: var(--primary-color);">Study
+                        Abroad Conclave</span>
+                </h1>
+                <p>India's most credible platform for global education discovery where students, parents, and experts
                     come together to make informed, future-ready decisions.</p>
-                <div class="event-meta-banner glass-card mt-2 mb-2 p-2"
-                    style="text-align: left; background: rgba(255,255,255,0.9);">
-                    <div class="grid-two" style="gap: 1rem;">
-                        <div><strong>📅 Date:</strong> 4th July</div>
-                        <div><strong>⏰ Time:</strong> 09:00 AM - 05:30 PM</div>
-                        <div><strong>📍 Venue:</strong> Shangri La Eros, New Delhi</div>
-                        <div><strong>🎟️ Entry:</strong> Free Registration</div>
-                    </div>
+                <div class="mt-2 mb-2">
+                    <span class="glass-card"
+                        style="display: inline-block; padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); white-space: nowrap;"><strong>July
+                            4, 2026 | Shangri-La Eros, New Delhi</strong></span>
                 </div>
                 <div class="supporting-line">Summit · Expo · Masterclasses · Awards</div>
                 <div class="cta-group">
-                    <a href="#register" class="btn btn-gradient">👉 Register Now</a>
-                    <a href="#experience" class="btn btn-outline">👉 Partner With Us</a>
+                    <button onclick="openModal()" class="btn btn-gradient">Register Now</button>
+                    <a href="#experience" class="btn btn-outline"> Partner With Us</a>
                 </div>
                 <div class="trust-strip mt-2">
                     <p style="font-size: 1.6rem; margin: 0;"><strong>Powered by <img
@@ -83,91 +78,179 @@
         </div>
     </section>
 
-    <!-- 2. Problem Section — replaced with editorial Event Snapshot content -->
-    <section class="section-padding problem-section fade-in-up bg-clean">
-        <div class="container center-text max-800">
-            <h2 class="impact-title text-red">The study abroad journey is broken</h2>
-            <p class="lead-text">Students and families navigate a maze of misinformation, aggressive selling, and
-                conflicting advice — while choices are driven by marketing rather than genuine fit.</p>
-            <ul class="clean-list">
-                <li>Hidden costs and unclear ROI create real financial risk</li>
-                <li>Visa uncertainties leave families anxious and unprepared</li>
-                <li>Scams and fake institutions go undetected until it's too late</li>
-                <li>No single trusted place for honest, expert guidance</li>
-            </ul>
+    <div class="bento-grid-four container mt-3 mb-2">
+        <div class="glass-card editorial-card center-text" style="justify-content: center;">
+            <div class="stat-number" style="color: var(--primary-color); font-size: 3.5rem;">30+</div>
+            <div class="bold-text" style="font-size: 1.2rem; color: var(--text-dark);">Universities</div>
+        </div>
+        <div class="glass-card editorial-card center-text" style="justify-content: center;">
+            <div class="stat-number" style="color: var(--primary-color); font-size: 3.5rem;">12+</div>
+            <div class="bold-text" style="font-size: 1.2rem; color: var(--text-dark);">Countries</div>
+        </div>
+        <div class="glass-card editorial-card center-text" style="justify-content: center;">
+            <div class="stat-number" style="color: var(--primary-color); font-size: 3.5rem;">25+</div>
+            <div class="bold-text" style="font-size: 1.2rem; color: var(--text-dark);">Speakers</div>
+        </div>
+        <div class="glass-card editorial-card center-text" style="justify-content: center;">
+            <div class="stat-number" style="color: var(--primary-color); font-size: 3.5rem;">750+</div>
+            <div class="bold-text" style="font-size: 1.2rem; color: var(--text-dark);">Students</div>
+        </div>
+    </div>
 
-            <!-- Data callouts from editorial copy -->
-            <div class="stats-row mt-3">
-                <div class="stat-card glass-card">
-                    <div class="stat-number text-red">↓ 5.7%</div>
-                    <div class="stat-label">Decline in outbound enrolments abroad in 2025 vs 2024 — driven by stricter
-                        visa policies, rising costs, and families demanding stronger ROI.</div>
+    <!-- Event Snapshot Section -->
+    <section class="fade-in-up" id="event-snapshot" style="padding: 4rem 5%; background-color: #fdf5eb;">
+        <div class="container" style="display: flex; flex-direction: column; gap: 3rem;">
+
+            <div class="grid-two" style="gap: 3rem; align-items: stretch;">
+                <div class="text-content" style="display: flex; flex-direction: column; justify-content: center;">
+                    <p style="color: #222; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem;">The study abroad
+                        journey appears broken for Indian students and their families. They navigate a maze of
+                        misinformation, aggressive selling, and conflicting advice, while choices are often driven by
+                        marketing rather than genuine fit. Moreover, hidden costs and unclear ROI create financial
+                        risks. Not to forget the visa uncertainties and the danger of scams and fake institutions.</p>
+                    <p style="color: #222; font-size: 1.05rem; line-height: 1.7; margin-bottom: 0;">Supporting data
+                        underscores the urgency – outbound higher education enrolments abroad <strong>declined by 5.7%
+                            in 2025 from 2024</strong> owing to stricter visa and immigration policies across major
+                        destinations, rising costs of education and living expenses, and families demanding stronger
+                        return on investment amid uncertain post-study work opportunities. Visa access also tightened
+                        sharply, with US F-1 student visa issuances to Indians <strong>falling by 69%</strong> in the
+                        peak months of June–July 2025 compared to the same period in 2024.</p>
                 </div>
-                <div class="stat-card glass-card">
-                    <div class="stat-number text-red">↓ 69%</div>
-                    <div class="stat-label">Drop in US F-1 student visa issuances to Indians in June–July 2025 compared
-                        to the same period in 2024.</div>
+                <div class="image-content" style="display: flex;">
+                    <img src="https://images.pexels.com/photos/7616700/pexels-photo-7616700.jpeg"
+                        alt="Students navigating challenges"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;">
                 </div>
             </div>
 
-            <div class="punch-line-box glass-panel mt-3">
-                <p>This is not just confusing — it's risky.</p>
-                <h3>India doesn't need another study abroad fair.<br>It needs a <strong>trusted decision-making
-                        platform.</strong></h3>
+            <div class="grid-two" style="gap: 3rem; align-items: stretch;">
+                <div class="image-content mobile-order-last" style="display: flex;">
+                    <img src="assets/expoabroad.png" alt="Times Study Abroad Conclave"
+                        style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;">
+                </div>
+                <div class="text-content mobile-order-first"
+                    style="display: flex; flex-direction: column; justify-content: center;">
+                    <p style="color: #222; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1rem;">This is precisely
+                        why the <strong>Times Study Abroad Conclave</strong> has been created. A first-of-its-kind
+                        platform that brings
+                        together four powerful experiences in one place: The <strong>Summit</strong> for national
+                        conversations on global education, employability, policy, and future skills; the
+                        <strong>Expo</strong> featuring verified universities and country bodies for real engagement;
+                        practical <strong>Masterclasses</strong> on scholarships, visas, ROI, and career mapping; and
+                        the <strong>Awards</strong> recognising trust, transparency, and student-first excellence in
+                        global education.
+                    </p>
+                    <p style="color: #222; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">The conclave
+                        will help you leave with clarity you cannot get online – the ability to choose the right country
+                        and university, understand real costs and scholarships, learn visa processes, and make confident
+                        family decisions focused on long-term outcomes rather than trends.</p>
+                </div>
             </div>
         </div>
+
+        <style>
+            @media (max-width: 900px) {
+                #event-snapshot .grid-two {
+                    gap: 1.5rem !important;
+                }
+
+                .mobile-order-first {
+                    order: -1;
+                }
+
+                .mobile-order-last {
+                    order: 1;
+                }
+            }
+        </style>
     </section>
 
-    <!-- 3. Solution / Positioning -->
-    <section id="about" class="section-padding solution-section fade-in-up">
-        <div class="container center-text max-800">
-            <span class="badge">Introducing</span>
-            <h2>Times Study Abroad Conclave</h2>
-            <p class="large-text">A first-of-its-kind platform that brings <strong>truth, transparency, and
-                    career-first guidance</strong> into global education decisions.</p>
-            <p class="reinforce-text">Where aspiration meets verified opportunity.<br><strong>Where information becomes
-                    decision.</strong></p>
-        </div>
-    </section>
-
-    <!-- 4. Platform Experience (4 Pillars) — updated with editorial descriptions -->
+    <!-- 4. Platform Experience (4 Pillars) updated with editorial descriptions -->
     <section id="experience" class="section-padding bento-section fade-in-up bg-light-blue">
         <div class="container">
             <div class="section-header">
                 <h2>One platform. Four powerful experiences.</h2>
             </div>
-            <div class="bento-grid-four">
-                <div class="bento-item glass-card editorial-card">
+        </div>
+        <div class="marquee-wrapper">
+            <div class="marquee-track">
+                <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🎤 Summit</h3>
                     <p>National conversations on global education, employability, policy, and future skills.</p>
                 </div>
-                <div class="bento-item glass-card editorial-card">
+                <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🌍 Expo</h3>
-                    <p>Featuring verified universities and country bodies for real engagement — not noise.</p>
+                    <p>Featuring verified universities and country bodies for real engagement not noise.</p>
                 </div>
-                <div class="bento-item glass-card editorial-card">
+                <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🎓 Masterclasses</h3>
                     <p>Practical sessions on scholarships, visas, ROI, and career mapping.</p>
                 </div>
-                <div class="bento-item glass-card editorial-card">
+                <div class="bento-item glass-card editorial-card marquee-card">
+                    <h3>🏆 Awards</h3>
+                    <p>Recognising trust, transparency, and student-first excellence in global education.</p>
+                </div>
+                <!-- Duplicated for seamless loop -->
+                <div class="bento-item glass-card editorial-card marquee-card">
+                    <h3>🎤 Summit</h3>
+                    <p>National conversations on global education, employability, policy, and future skills.</p>
+                </div>
+                <div class="bento-item glass-card editorial-card marquee-card">
+                    <h3>🌍 Expo</h3>
+                    <p>Featuring verified universities and country bodies for real engagement not noise.</p>
+                </div>
+                <div class="bento-item glass-card editorial-card marquee-card">
+                    <h3>🎓 Masterclasses</h3>
+                    <p>Practical sessions on scholarships, visas, ROI, and career mapping.</p>
+                </div>
+                <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🏆 Awards</h3>
                     <p>Recognising trust, transparency, and student-first excellence in global education.</p>
                 </div>
             </div>
-            <div class="reinforcement-banner center-text mt-3">
-                <p>This is not an event.</p>
-                <h3>It is a <strong>trust infrastructure for study abroad decisions.</strong></h3>
-            </div>
         </div>
+
+        <style>
+            .marquee-wrapper {
+                overflow: hidden;
+                width: 100%;
+                margin-top: 2rem;
+                padding: 0.5rem 0;
+            }
+
+            .marquee-track {
+                display: flex;
+                gap: 1.5rem;
+                width: max-content;
+                animation: marquee-scroll 18s linear infinite;
+            }
+
+            .marquee-track:hover {
+                animation-play-state: paused;
+            }
+
+            .marquee-card {
+                width: 320px;
+                flex-shrink: 0;
+            }
+
+            @keyframes marquee-scroll {
+                0% {
+                    transform: translateX(0);
+                }
+
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
     </section>
 
-    <!-- 5. Conversation Tracks — NEW section, no prior overlap -->
+    <!-- 5. Conversation Tracks NEW section, no prior overlap -->
     <section id="tracks" class="section-padding fade-in-up">
         <div class="container">
             <div class="section-header center-text">
                 <h2>Conversation Tracks</h2>
-                <p class="lead-text">Ten national-level discussions built around the questions that matter most right
-                    now.</p>
             </div>
             <div class="tracks-grid">
                 <div class="track-pill glass-card">🌏 Choosing the Right Country in 2026</div>
@@ -184,12 +267,12 @@
         </div>
     </section>
 
-    <!-- 6. Who Should Attend — replaced with full editorial list -->
+    <!-- 6. Who Should Attend replaced with full editorial list -->
     <section id="attendees" class="section-padding fade-in-up bg-light-blue">
         <div class="container">
             <div class="section-header center-text">
                 <h2>Who Should Join</h2>
-                <p class="lead-text">Built for everyone with a stake in a study abroad decision.</p>
+                <p class="lead-text">Built for everyone with a stake in a study abroad decision</p>
             </div>
             <div class="audience-grid">
                 <div class="audience-card glass-card editorial-card">
@@ -233,147 +316,224 @@
                     <div>Current Abroad Students &amp; Alumni</div>
                 </div>
             </div>
-            <div class="differentiator-strip glass-panel mt-3 center-text">
-                <ul class="inline-list">
-                    <li>High Intent Audience</li>
-                    <li>Parents in the Room</li>
-                    <li>Decision-Stage Conversations</li>
-                    <li>Verified, Not Random</li>
-                </ul>
-            </div>
             <div class="center-text mt-2">
-                <a href="#register" class="btn btn-primary">👉 Secure Your Seat</a>
+                <button onclick="openModal()" class="btn btn-primary">Secure Your Seat</button>
             </div>
         </div>
     </section>
 
-    <!-- 7. Why To Attend + Masterclass Highlights -->
-    <section class="section-padding fade-in-up">
-        <div class="container">
-            <div class="grid-two">
-                <!-- Why To Attend — replaced with editorial copy -->
-                <div class="glass-card p-3 editorial-card">
-                    <span class="badge" style="background: rgba(16, 185, 129, 0.1); color: #10b981;">💡 Why
-                        Attend</span>
-                    <h2 class="mt-1">Clarity you cannot get online</h2>
-                    <ul class="check-list mt-2">
-                        <li>Get trusted guidance in a sea of misinformation</li>
-                        <li>Access verified universities &amp; partners</li>
-                        <li>Learn from national-level expert discussions</li>
-                        <li>Practical masterclasses for real decision-making</li>
-                        <li>Clarity on costs, ROI &amp; long-term career outcomes</li>
-                        <li>A one-stop trusted platform for the entire family</li>
-                    </ul>
-                    <div class="mt-3" style="border-top: 1px solid rgba(0,0,0,0.1); padding-top: 1.5rem;">
-                        <p class="bold-text" style="color: var(--primary-color);">Not more information. Better
-                            decisions.</p>
-                    </div>
-                </div>
-
-                <!-- Masterclass Highlights — unchanged, no overlap with editorial copy -->
-                <div class="glass-card p-3 editorial-card dark-glass">
-                    <span class="badge light-badge">📅 Essential Masterclasses</span>
-                    <h2 class="mt-1" style="color: white;">Sessions that actually matter</h2>
-                    <ul class="bullet-list light-text mt-2" style="font-size: 1.1rem; line-height: 1.8;">
-                        <li><strong style="color: #60a5fa;">Panel:</strong> How to choose the right country (not the
-                            most marketed one)</li>
-                        <li><strong style="color: #60a5fa;">Workshop:</strong> Scholarships decoded: reality vs
-                            expectation</li>
-                        <li><strong style="color: #60a5fa;">Alert:</strong> Study abroad scams and red flags</li>
-                        <li><strong style="color: #60a5fa;">Parents:</strong> What parents must know before saying yes
-                        </li>
-                        <li><strong style="color: #60a5fa;">Data:</strong> Career outcomes by country and course</li>
-                    </ul>
-                    <div class="mt-3" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
-                        <a href="#agenda" class="btn btn-outline"
-                            style="border-color: rgba(255,255,255,0.5); color: white;">👉 View Full Agenda</a>
-                    </div>
-                </div>
-            </div>
+    <!-- 7. Why To Attend — Immersive Full-Width Section -->
+    <section class="fade-in-up"
+        style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 3rem 5%; position: relative; overflow: hidden;">
+        <!-- Decorative accent -->
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), #6366f1);">
         </div>
-    </section>
 
-    <!-- 8. Trust & Authority Section — unchanged, no editorial overlap -->
-    <section class="section-padding fade-in-up bg-light-blue">
         <div class="container">
-            <div class="section-header center-text">
-                <h2>Why this platform is different</h2>
-            </div>
-            <div class="bento-grid-four">
-                <div class="glass-card p-2 center-text editorial-card">
-                    <h3>🛡️ Trust-First Approach</h3>
-                    <p>Built for guidance, not selling.</p>
-                </div>
-                <div class="glass-card p-2 center-text editorial-card">
-                    <h3>📰 Times Credibility</h3>
-                    <p>Backed by one of India's most trusted media institutions.</p>
-                </div>
-                <div class="glass-card p-2 center-text editorial-card">
-                    <h3>🌐 Institutional Ecosystem</h3>
-                    <p>Embassies, universities, and verified partners.</p>
-                </div>
-                <div class="glass-card p-2 center-text editorial-card">
-                    <h3>📊 Career-Focused Lens</h3>
-                    <p>Decisions based on long-term outcomes, not trends.</p>
-                </div>
-            </div>
-            <div class="reinforcement-banner center-text mt-3">
-                <p class="large-text">Where most platforms sell destinations,<br><strong>this platform helps you choose
-                        wisely.</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 9. Partner Section (B2B) — "What partners get" list replaced with editorial copy -->
-    <section id="partners" class="section-padding b2b-section fade-in-up dark-glass">
-        <div class="container">
-            <div class="grid-two align-center">
+            <div class="grid-two align-center" style="gap: 4rem;">
+                <!-- Left: Headline & Tagline -->
                 <div>
-                    <span class="badge light-badge">For B2B Partners</span>
-                    <h2>Partner with India's most credible global education platform</h2>
-                    <p class="lead-text mt-1">Engage decision-stage students and families in a trust-led environment.
-                    </p>
-                    <p class="mt-2">This is where institutions, countries, and service providers connect with
-                        <strong>high-intent audiences</strong> actively making study abroad decisions.
-                    </p>
-                    <p class="mt-2 text-gradient">Not visibility.<br><strong>Credible influence at the moment of
-                            decision.</strong></p>
+                    <span class="badge light-badge" style="margin-bottom: 1.5rem;">Why Attend</span>
+                    <h2 style="color: white; font-size: 2.8rem; line-height: 1.15; margin-bottom: 1.5rem;">Clarity
+                        you<br><span style="color: #60a5fa;">cannot get online</span></h2>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">
+                        One day that replaces months of confusion, conflicting advice,<br>and second-guessing.</p>
                 </div>
-                <div class="b2b-card glass-panel">
-                    <h3>What partners get:</h3>
-                    <ul class="check-list light-text mt-1">
-                        <li>Premium on-ground presence that signals category leadership</li>
-                        <li>Thought leadership that builds credibility, not just awareness</li>
-                        <li>Direct interaction with families making real decisions</li>
-                        <li>Verified, opt-in lead generation you can actually use</li>
-                        <li>Long-term brand authority in a high-stakes category</li>
-                        <li>Opportunity to showcase products in real decision moments</li>
+
+                <!-- Right: Checklist -->
+                <div>
+                    <ul
+                        style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem;">
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Get trusted guidance in a
+                                sea of misinformation</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Access verified universities
+                                &amp; partners</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Learn from national-level
+                                expert discussions</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Practical masterclasses for
+                                real decision-making</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Clarity on costs, ROI &amp;
+                                long-term career outcomes</span>
+                        </li>
+                        <li
+                            style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">A one-stop trusted platform
+                                for the entire family</span>
+                        </li>
                     </ul>
-                    <h3 class="mt-2">Partner Categories:</h3>
-                    <ul class="bullet-list light-text mt-1 mb-2">
-                        <li>Universities &amp; Country Bodies</li>
-                        <li>Finance &amp; Loan Providers</li>
-                        <li>Visa &amp; Immigration Experts</li>
-                        <li>Scholarship &amp; Insurance Partners</li>
-                        <li>Housing &amp; Career Platforms</li>
-                    </ul>
-                    <div class="cta-group">
-                        <a href="#partner" class="btn btn-primary full-width mb-1">👉 Partner With Us</a>
-                        <a href="#sponsor" class="btn btn-outline full-width text-white">👉 Request Sponsorship Deck</a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Registration Section — unchanged -->
-    <section id="register" class="section-padding urgency-section fade-in-up">
-        <div class="container max-800 glass-card p-4">
-            <div class="center-text">
-                <span class="badge">Registrations Open 10th April</span>
-                <h2>Secure Your Free Seat</h2>
-                <p class="mb-3">Registration is free but mandatory. Please fill in your details below to confirm your
-                    presence at the Times Study Abroad Conclave.</p>
+    <!-- B2B Partner Section — Revamped -->
+    <section id="partners" class="fade-in-up"
+        style="background: #ffffff; padding: 3rem 0; position: relative; overflow: hidden; border-top: 1px solid #e2e8f0;">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #3b82f6, #6366f1, #0055ff);">
+        </div>
+
+        <!-- Full-width headline -->
+        <h2
+            style="font-size: clamp(1.8rem, 4vw, 4rem); font-weight: 800; padding: 0 5%; margin: 0 0 4rem; line-height: 1.15; color: #0f172a;">
+            Partner with India's most credible <span style="color: var(--primary-color);">global education discovery
+                platform</span></h2>
+
+        <!-- 6 benefit items in responsive grid -->
+        <div class="b2b-benefits-grid">
+            <style>
+                .b2b-benefits-grid {
+                    padding: 0 5%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 2rem;
+                }
+
+                @media (max-width: 900px) {
+                    .b2b-benefits-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+
+                @media (max-width: 600px) {
+                    .b2b-benefits-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            </style>
+
+            <div
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                <div
+                    style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                    </svg>
+                </div>
+                <div>
+                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Premium on-ground
+                        presence that signals category leadership</p>
+                </div>
+            </div>
+
+            <div
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                <div
+                    style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                </div>
+                <div>
+                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Thought leadership
+                        that builds credibility, not just awareness</p>
+                </div>
+            </div>
+
+            <div
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                <div
+                    style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                </div>
+                <div>
+                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Direct interaction
+                        with families making real decisions</p>
+                </div>
+            </div>
+
+            <div
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                <div
+                    style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                    </svg>
+                </div>
+                <div>
+                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Verified, opt-in
+                        lead generation you can actually use</p>
+                </div>
+            </div>
+
+            <div
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                <div
+                    style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <path d="M3 9h18M9 21V9" />
+                    </svg>
+                </div>
+                <div>
+                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Long-term brand
+                        authority in a high-stakes category</p>
+                </div>
+            </div>
+
+            <div
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                <div
+                    style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 8v4l3 3" />
+                    </svg>
+                </div>
+                <div>
+                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Opportunity to
+                        showcase products in real decision moments</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Registration Modal -->
+    <div id="register-modal"
+        style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(6px); align-items:center; justify-content:center; padding:1rem;">
+        <div
+            style="background:white; border-radius:20px; padding:2.5rem; width:100%; max-width:600px; max-height:90vh; overflow-y:auto; position:relative;">
+            <button onclick="closeModal()"
+                style="position:absolute; top:1.2rem; right:1.2rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">✕</button>
+            <div class="center-text" style="margin-bottom:1.5rem;">
+                <span class="badge">Register Now</span>
+                <h2 style="margin:0.5rem 0 0.5rem;">Secure Your Free Seat</h2>
+                <p style="color:#64748b; font-size:0.95rem;">Registration is free but mandatory. Fill in your details to
+                    confirm presence at the Times Study Abroad Conclave.</p>
             </div>
             <form id="registration-form" class="registration-form">
                 <div class="form-grid">
@@ -395,76 +555,48 @@
                     <div class="form-group" style="grid-column: 1 / -1;">
                         <label>Who are you registering as? *</label>
                         <div class="radio-group mt-1">
-                            <label class="radio-label">
-                                <input type="radio" name="profile_type" value="student" checked>
-                                <span>Student</span>
-                            </label>
-                            <label class="radio-label">
-                                <input type="radio" name="profile_type" value="professional">
-                                <span>Professional</span>
-                            </label>
+                            <label class="radio-label"><input type="radio" name="profile_type" value="student"
+                                    checked><span>Student</span></label>
+                            <label class="radio-label"><input type="radio" name="profile_type"
+                                    value="professional"><span>Professional</span></label>
                         </div>
                     </div>
                 </div>
-
-                <!-- Student Fields -->
                 <div id="student-fields" class="form-grid profile-specific-fields active">
-                    <div class="form-group">
-                        <label for="student-institute">Institute Name *</label>
-                        <input type="text" id="student-institute" placeholder="Where do you study?" class="form-control"
-                            required>
+                    <div class="form-group"><label for="student-institute">Institute Name *</label><input type="text"
+                            id="student-institute" placeholder="Where do you study?" class="form-control" required>
                     </div>
-                    <div class="form-group">
-                        <label for="student-stream">Stream / Course *</label>
-                        <input type="text" id="student-stream" placeholder="e.g. Science, B.Tech" class="form-control"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="student-graduation">Graduation Year *</label>
-                        <input type="text" id="student-graduation" placeholder="e.g. 2026" class="form-control"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <label for="student-city">Current City *</label>
-                        <input type="text" id="student-city" placeholder="Your current city" class="form-control"
-                            required>
-                    </div>
+                    <div class="form-group"><label for="student-stream">Stream / Course *</label><input type="text"
+                            id="student-stream" placeholder="e.g. Science, B.Tech" class="form-control" required></div>
+                    <div class="form-group"><label for="student-graduation">Graduation Year *</label><input type="text"
+                            id="student-graduation" placeholder="e.g. 2026" class="form-control" required></div>
+                    <div class="form-group"><label for="student-city">Current City *</label><input type="text"
+                            id="student-city" placeholder="Your current city" class="form-control" required></div>
                 </div>
-
-                <!-- Professional Fields -->
                 <div id="professional-fields" class="form-grid profile-specific-fields">
-                    <div class="form-group">
-                        <label for="prof-org">Organisation Name *</label>
-                        <input type="text" id="prof-org" placeholder="Where do you work?" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="prof-industry">Industry *</label>
-                        <input type="text" id="prof-industry" placeholder="e.g. IT, Finance" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="prof-exp">Total Years of Experience *</label>
-                        <input type="text" id="prof-exp" placeholder="e.g. 3 Years" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="prof-city">Current City *</label>
-                        <input type="text" id="prof-city" placeholder="Your current city" class="form-control">
-                    </div>
+                    <div class="form-group"><label for="prof-org">Organisation Name *</label><input type="text"
+                            id="prof-org" placeholder="Where do you work?" class="form-control"></div>
+                    <div class="form-group"><label for="prof-industry">Industry *</label><input type="text"
+                            id="prof-industry" placeholder="e.g. IT, Finance" class="form-control"></div>
+                    <div class="form-group"><label for="prof-exp">Years of Experience *</label><input type="text"
+                            id="prof-exp" placeholder="e.g. 3 Years" class="form-control"></div>
+                    <div class="form-group"><label for="prof-city">Current City *</label><input type="text"
+                            id="prof-city" placeholder="Your current city" class="form-control"></div>
                 </div>
-
                 <div class="center-text mt-3">
-                    <button type="submit" class="btn btn-gradient btn-large full-width"
-                        style="font-size: 1.25rem;">Submit Registration</button>
+                    <button type="submit" class="btn btn-gradient btn-large full-width" style="font-size:1.1rem;">Submit
+                        Registration</button>
                     <p class="mt-1"><small>By registering, you agree to our terms and conditions.</small></p>
                 </div>
             </form>
         </div>
-    </section>
+    </div>
 
-    <!-- FAQ — unchanged -->
-    <section class="section-padding fade-in-up bg-light-blue">
+    <!-- FAQ unchanged -->
+    <section id="faq" class="section-padding fade-in-up bg-light-blue">
         <div class="container max-800">
             <div class="section-header center-text">
-                <h2>Frequently Asked Questions</h2>
+                <h2>FAQs</h2>
             </div>
             <div class="accordion">
                 <details class="glass-card mb-1">
@@ -490,23 +622,35 @@
         </div>
     </section>
 
-    <!-- Footer — unchanged -->
-    <footer class="footer glass-panel">
-        <div class="footer-content container">
-            <div class="footer-brand">
-                <h2>TIMES <span>CONCLAVE</span></h2>
-                <p>Trust infrastructure for study abroad decisions.</p>
-            </div>
-            <div class="footer-links">
+    <!-- Footer -->
+    <footer class="footer glass-panel" style="padding-bottom: 80px;">
+        <div class="footer-content container" style="justify-content: center;">
+            <div class="footer-links" style="display:flex; gap:2rem; flex-wrap:wrap; justify-content:center;">
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
                 <a href="#">Contact Us</a>
             </div>
         </div>
-        <div class="copyright container">
+        <div class="copyright container" style="text-align:center;">
             &copy; 2026 Times Study Abroad Conclave. All rights reserved.
         </div>
     </footer>
+
+    <!-- Sticky Footer CTA -->
+    <div id="sticky-footer"
+        style="position:fixed; bottom:0; left:0; right:0; z-index:999; background:white; border-top:1px solid #e2e8f0; box-shadow:0 -4px 24px rgba(0,0,0,0.1); padding:0.75rem 5%; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+        <div style="font-weight:700; color:#0f172a; font-size:1rem;">
+            <span style="color:var(--primary-color);">Times</span> Study Abroad Conclave
+            <span style="font-size:0.8rem; font-weight:500; color:#64748b; margin-left:0.75rem;">July 4, 2026 ·
+                Shangri-La Eros, New Delhi</span>
+        </div>
+        <div style="display:flex; gap:0.75rem; flex-shrink:0;">
+            <a href="#partners" class="btn btn-outline" style="padding:0.6rem 1.4rem; font-size:0.9rem;">Partner With
+                Us</a>
+            <button onclick="openModal()" class="btn btn-gradient"
+                style="padding:0.6rem 1.4rem; font-size:0.9rem;">Register Now</button>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
@@ -570,18 +714,23 @@
 
         /* Audience Grid */
         .audience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 1rem;
             margin-top: 2rem;
         }
 
         .audience-card {
+            width: calc(25% - 0.75rem);
+            min-width: 150px;
+            height: 120px;
             padding: 1.2rem 1rem;
             border-radius: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             text-align: center;
             gap: 0.5rem;
             font-weight: 500;

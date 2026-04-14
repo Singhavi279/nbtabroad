@@ -1,3 +1,24 @@
+/* =========================================
+   Registration Modal
+   ========================================= */
+function openModal() {
+    const modal = document.getElementById('register-modal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+    const modal = document.getElementById('register-modal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+}
+document.addEventListener('click', function(e) {
+    const modal = document.getElementById('register-modal');
+    if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     /* =========================================
        Navbar Scroll Effect
@@ -50,6 +71,46 @@ document.addEventListener("DOMContentLoaded", () => {
     const fadeElements = document.querySelectorAll('.fade-in-up');
     fadeElements.forEach(el => {
         animateOnScroll.observe(el);
+    });
+
+    /* =========================================
+       Number Counter Animation
+       ========================================= */
+    const counters = document.querySelectorAll('.bento-grid-four .stat-number');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const target = parseInt(el.dataset.target);
+                const suffix = el.dataset.suffix;
+                const text = el.dataset.original;
+                const duration = 2500;
+                const start = performance.now();
+                const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+                
+                const update = (time) => {
+                    let progress = (time - start) / duration;
+                    if (progress > 1) progress = 1;
+                    el.innerText = Math.floor(target * easeOutExpo(progress)) + suffix;
+                    if (progress < 1) requestAnimationFrame(update);
+                    else el.innerText = text;
+                };
+                requestAnimationFrame(update);
+                observer.unobserve(el);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => {
+        const text = counter.innerText;
+        const match = text.match(/(\d+)/);
+        if (match) {
+            counter.dataset.target = match[0];
+            counter.dataset.suffix = text.replace(match[0], '');
+            counter.dataset.original = text;
+            counter.innerText = '0' + counter.dataset.suffix;
+            counterObserver.observe(counter);
+        }
     });
 
     /* =========================================

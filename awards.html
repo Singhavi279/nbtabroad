@@ -44,15 +44,26 @@
     <!-- Hero -->
     <section class="awards-hero fade-in-up">
         <div class="awards-hero-accent-bar"></div>
+        <!-- Ambient glow orbs -->
+        <div class="hero-glow-orb hero-glow-orb--1"></div>
+        <div class="hero-glow-orb hero-glow-orb--2"></div>
+        <!-- Decorative expanding rings -->
+        <div class="hero-deco-ring hero-deco-ring--1"></div>
+        <div class="hero-deco-ring hero-deco-ring--2"></div>
+        <!-- Twinkling gold sparkle dots -->
+        <div class="hero-sparkles">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
         <div class="container" style="position: relative; z-index: 1;">
             <div style="text-align: center;">
                 <span class="badge"
                     style="background: rgba(245,158,11,0.15); color: #f59e0b;">Nominations Open &nbsp;·&nbsp; Deadline
                     June 20, 2026</span>
                 <div style="font-size: 5rem; margin: 1.5rem 0 1rem; line-height: 1;">🏆</div>
-                <h1
-                    style="color: white; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.1; margin-bottom: 1rem;">
-                    Times Study Abroad<br><span style="color: #fbbf24;">Awards</span>
+                <h1 style="margin-bottom: 1rem; line-height: 1.15; text-align: center;">
+                    <span style="display: block; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: white; letter-spacing: -0.02em;">Times</span>
+                    <span style="display: block; font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 700; color: #fbbf24; letter-spacing: -0.02em;">Study Abroad Awards</span>
                 </h1>
                 <p
                     style="color: rgba(255,255,255,0.75); font-size: 1.2rem; max-width: 580px; margin: 0 auto 2rem; line-height: 1.7;">
@@ -343,7 +354,7 @@
     <style>
         /* Hero */
         .awards-hero {
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.8) 100%), url('assets/awards_hero_bg.png') center/cover no-repeat;
+            background: #0a0f1e;
             min-height: 92vh;
             display: flex;
             align-items: center;
@@ -354,15 +365,15 @@
             overflow: hidden;
         }
 
+        /* Dot-grid texture overlay */
         .awards-hero::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.07) 0%, transparent 60%);
+            inset: 0;
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+            background-size: 36px 36px;
             pointer-events: none;
+            z-index: 0;
         }
 
         .awards-hero-accent-bar {
@@ -372,6 +383,98 @@
             width: 100%;
             height: 4px;
             background: linear-gradient(90deg, #d97706, #fbbf24, #d97706);
+            z-index: 2;
+        }
+
+        /* Pulsing amber glow orbs */
+        .hero-glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-glow-orb--1 {
+            width: 640px;
+            height: 640px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(ellipse, rgba(245, 158, 11, 0.13) 0%, rgba(251, 191, 36, 0.06) 40%, transparent 70%);
+            animation: ambientPulse 5s ease-in-out infinite alternate;
+        }
+
+        .hero-glow-orb--2 {
+            width: 960px;
+            height: 960px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(ellipse, rgba(99, 102, 241, 0.05) 0%, transparent 60%);
+            animation: ambientPulse 8s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes ambientPulse {
+            0%   { transform: translate(-50%, -50%) scale(0.88); opacity: 0.65; }
+            100% { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
+        }
+
+        /* Expanding decorative rings */
+        .hero-deco-ring {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+            border: 1px solid rgba(245, 158, 11, 0.09);
+        }
+
+        .hero-deco-ring--1 {
+            width: 480px;
+            height: 480px;
+            top: 50%;
+            left: 50%;
+            animation: ringPulse 6s ease-in-out infinite;
+        }
+
+        .hero-deco-ring--2 {
+            width: 760px;
+            height: 760px;
+            top: 50%;
+            left: 50%;
+            animation: ringPulse 6s ease-in-out infinite 2s;
+        }
+
+        @keyframes ringPulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.5; }
+            50%       { transform: translate(-50%, -50%) scale(1.06); opacity: 0.1; }
+        }
+
+        /* Twinkling gold sparkle dots */
+        .hero-sparkles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-sparkles span {
+            position: absolute;
+            display: block;
+            background: #fbbf24;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        .hero-sparkles span:nth-child(1) { width: 3px; height: 3px; top: 18%; left: 12%; animation-delay: 0s; }
+        .hero-sparkles span:nth-child(2) { width: 2px; height: 2px; top: 30%; left: 82%; animation-delay: 0.8s; }
+        .hero-sparkles span:nth-child(3) { width: 4px; height: 4px; top: 72%; left: 8%;  animation-delay: 1.4s; }
+        .hero-sparkles span:nth-child(4) { width: 2px; height: 2px; top: 14%; left: 68%; animation-delay: 0.4s; }
+        .hero-sparkles span:nth-child(5) { width: 3px; height: 3px; top: 78%; left: 78%; animation-delay: 2.1s; }
+        .hero-sparkles span:nth-child(6) { width: 2px; height: 2px; top: 52%; left: 92%; animation-delay: 1.0s; }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0;   transform: scale(0.4); }
+            50%       { opacity: 1;   transform: scale(1); }
         }
 
         /* What It's About */

@@ -25,6 +25,7 @@
             <li><a href="#tracks">Conversation Tracks</a></li>
             <li><a href="#attendees">Attend</a></li>
             <li><a href="#partners">Partner</a></li>
+            <li><a href="awards.html">Awards</a></li>
             <li><a href="#faq">FAQs</a></li>
         </ul>
         <button onclick="openModal()" class="btn btn-primary nav-cta">Register Now</button>
@@ -64,7 +65,7 @@
                         style="display: inline-block; padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); white-space: nowrap;"><strong>July
                             4, 2026 | Shangri-La Eros, New Delhi</strong></span>
                 </div>
-                <div class="supporting-line">Summit · Expo · Masterclasses · Awards</div>
+                <div class="supporting-line">Summit · Expo · Masterclasses · <a href="awards.html" style="color: inherit; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 1px;">Awards</a></div>
                 <div class="cta-group">
                     <button onclick="openModal()" class="btn btn-gradient">Register Now</button>
                     <a href="#experience" class="btn btn-outline"> Partner With Us</a>
@@ -137,7 +138,7 @@
                         conversations on global education, employability, policy, and future skills; the
                         <strong>Expo</strong> featuring verified universities and country bodies for real engagement;
                         practical <strong>Masterclasses</strong> on scholarships, visas, ROI, and career mapping; and
-                        the <strong>Awards</strong> recognising trust, transparency, and student-first excellence in
+                        the <a href="awards.html" style="color: inherit; text-decoration: none;"><strong>Awards</strong></a> recognising trust, transparency, and student-first excellence in
                         global education.
                     </p>
                     <p style="color: #222; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">The conclave
@@ -189,6 +190,7 @@
                 <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🏆 Awards</h3>
                     <p>Recognising trust, transparency, and student-first excellence in global education.</p>
+                    <a href="awards.html" style="margin-top: auto; padding-top: 1rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: inline-block; letter-spacing: 0.01em;">Explore Awards →</a>
                 </div>
                 <!-- Duplicated for seamless loop -->
                 <div class="bento-item glass-card editorial-card marquee-card">
@@ -206,6 +208,7 @@
                 <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🏆 Awards</h3>
                     <p>Recognising trust, transparency, and student-first excellence in global education.</p>
+                    <a href="awards.html" style="margin-top: auto; padding-top: 1rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: inline-block; letter-spacing: 0.01em;">Explore Awards →</a>
                 </div>
             </div>
         </div>
@@ -654,6 +657,7 @@
                             <a href="mailto:sagun.kumari@timesinternet.in">sagun.kumari@timesinternet.in</a>
                             <a href="tel:9304412377">+91 9304412377</a>
                         </div>
+                        <a href="awards.html" style="display: inline-block; margin-top: 1.25rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; letter-spacing: 0.02em;">View Awards Page →</a>
                     </div>
                 </div>
                 <!-- Speaking Opportunity -->
@@ -880,6 +884,175 @@
 
         .audience-icon {
             font-size: 1.8rem;
+        }
+    </style>
+
+    <style>
+        /* =============================================
+           INDEX — RESPONSIVE (5 BREAKPOINTS)
+           ============================================= */
+
+        /* 1280px — Large tablets / small desktops */
+        @media (max-width: 1280px) {
+            .editorial-theme {
+                max-width: 680px;
+            }
+        }
+
+        /* 1024px — Tablets landscape */
+        @media (max-width: 1024px) {
+            .editorial-theme {
+                max-width: 90%;
+                padding: 2.5rem;
+            }
+
+            /* Contact grid: 2 cols on tablet, overriding auto-fit behavior */
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        /* 768px — Tablets portrait */
+        @media (max-width: 768px) {
+            /* Hero */
+            .hero {
+                padding: 7rem 5% 3rem;
+                min-height: auto;
+            }
+
+            .editorial-theme {
+                padding: 2rem;
+                max-width: 100%;
+            }
+
+            /* Inline span font sizes won't respond to h1 rule — override directly */
+            #hero h1 span:first-child {
+                font-size: 2rem !important;
+            }
+
+            #hero h1 span:last-child {
+                font-size: 2.8rem !important;
+            }
+
+            /* Reduce vertical gap when grid-two stacks to 1 col */
+            .grid-two {
+                gap: 2rem !important;
+            }
+
+            /* Contact grid: 2 cols */
+            .contact-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            /* Registration modal */
+            #register-modal > div {
+                padding: 2rem 1.5rem !important;
+                margin: 0.5rem !important;
+            }
+
+            /* Sticky footer: hide verbose event date on small tablets */
+            #sticky-footer > div:first-child > span:last-child {
+                display: none;
+            }
+        }
+
+        /* 480px — Phones */
+        @media (max-width: 480px) {
+            /* Hero */
+            .hero {
+                padding: 6rem 4% 3rem;
+            }
+
+            .editorial-theme {
+                padding: 1.5rem;
+            }
+
+            #hero h1 span:first-child {
+                font-size: 1.7rem !important;
+            }
+
+            #hero h1 span:last-child {
+                font-size: 2.3rem !important;
+            }
+
+            /* Hide hashtag badge — too tight in corner on phones */
+            .nav-hashtag {
+                display: none;
+            }
+
+            /* Contact grid: 1 col */
+            .contact-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Contact cards: tighter padding */
+            .contact-card {
+                padding: 2rem 1.25rem;
+            }
+
+            /* Exit popup: tighter padding */
+            .popup-content {
+                padding: 2rem 1.5rem;
+            }
+
+            /* Registration modal: compact */
+            #register-modal > div {
+                padding: 1.5rem !important;
+                border-radius: 14px !important;
+            }
+
+            /* Sticky footer: expand both buttons to fill row */
+            #sticky-footer {
+                padding: 0.65rem 4% !important;
+            }
+
+            #sticky-footer > div:last-child {
+                width: 100%;
+                flex-shrink: 1 !important;
+            }
+
+            #sticky-footer > div:last-child a,
+            #sticky-footer > div:last-child button {
+                flex: 1;
+                text-align: center;
+                padding: 0.55rem 0.75rem !important;
+                font-size: 0.82rem !important;
+            }
+        }
+
+        /* 360px — Small phones */
+        @media (max-width: 360px) {
+            .hero {
+                padding: 5.5rem 4% 2.5rem;
+            }
+
+            #hero h1 span:first-child {
+                font-size: 1.5rem !important;
+            }
+
+            #hero h1 span:last-child {
+                font-size: 2rem !important;
+            }
+
+            /* Full-width audience cards on smallest screens */
+            .audience-card {
+                width: 100% !important;
+                min-width: unset;
+            }
+
+            /* Tighter contact cards */
+            .contact-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .contact-name {
+                font-size: 1.05rem;
+            }
+
+            /* Event snapshot section */
+            #event-snapshot {
+                padding: 2rem 4%;
+            }
         }
     </style>
 

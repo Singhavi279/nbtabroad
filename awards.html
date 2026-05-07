@@ -8,6 +8,7 @@
     <meta name="description"
         content="The Times Study Abroad Awards recognise credible outcomes, informed choices, and institutions that deliver on their promise in global education.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="awards.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 </head>
@@ -20,6 +21,7 @@
                 src="https://static.langimg.com/thumb/119164302/navbharat-times.jpg?width=366&resizemode=4"
                 alt="Navbharat Times" style="max-height: 45px; vertical-align: middle;"></div>
         <ul class="nav-links">
+            <li><a href="index.html" style="font-weight: 700;">TSAC 2026</a></li>
             <li><a href="index.html#event-snapshot">Event Snapshot</a></li>
             <li><a href="index.html#tracks">Conversation Tracks</a></li>
             <li><a href="index.html#attendees">Attend</a></li>
@@ -27,8 +29,25 @@
             <li><a href="#awards-faq">FAQs</a></li>
             <li><a href="awards.html" style="color: var(--primary-color);">Awards</a></li>
         </ul>
-        <a href="mailto:sagun.kumari@timesinternet.in" class="btn btn-primary nav-cta">Nominate Now</a>
+        <div class="nav-cta-group">
+            <a href="mailto:sagun.kumari@timesinternet.in" class="btn btn-primary nav-cta">Nominate Now</a>
+        </div>
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <a href="index.html" style="font-weight: 700;">TSAC 2026</a>
+        <a href="#awards-faq">FAQs</a>
+        <a href="index.html#event-snapshot">Event Snapshot</a>
+        <a href="index.html#tracks">Conversation Tracks</a>
+        <a href="index.html#attendees">Attend</a>
+        <a href="index.html#partners">Partner</a>
+        <a href="mailto:sagun.kumari@timesinternet.in" class="btn btn-primary"
+            style="margin-top: 0.5rem; text-align: center;">Nominate Now</a>
+    </div>
 
     <!-- Exit Intent Popup -->
     <div id="exit-popup" class="popup-overlay">
@@ -57,13 +76,12 @@
         </div>
         <div class="container" style="position: relative; z-index: 1;">
             <div style="text-align: center;">
-                <span class="badge"
-                    style="background: rgba(245,158,11,0.15); color: #f59e0b;">Nominations Open &nbsp;·&nbsp; Deadline
-                    June 20, 2026</span>
-                <div style="font-size: 5rem; margin: 1.5rem 0 1rem; line-height: 1;">🏆</div>
                 <h1 style="margin-bottom: 1rem; line-height: 1.15; text-align: center;">
-                    <span style="display: block; font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 800; color: white; letter-spacing: -0.02em;">Times</span>
-                    <span style="display: block; font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 700; color: #fbbf24; letter-spacing: -0.02em;">Study Abroad Awards</span>
+                    <span
+                        style="display: block; font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; color: white; letter-spacing: -0.02em; ">Times</span>
+                    <span
+                        style="display: block; font-size: clamp(1.5rem, 3.5vw, 2.8rem); font-weight: 600; color: #fbbf24; letter-spacing: 0.05em; margin-top: -0.2em;">Study
+                        Abroad Awards</span>
                 </h1>
                 <p
                     style="color: rgba(255,255,255,0.75); font-size: 1.2rem; max-width: 580px; margin: 0 auto 2rem; line-height: 1.7;">
@@ -82,6 +100,12 @@
                     <a href="#about-awards" class="btn btn-outline"
                         style="border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.9);">Learn More</a>
                 </div>
+                <!-- Process Advisors -->
+                <div class="process-advisors-card">
+                    <span class="process-advisors-label">Process Advisors</span>
+                    <img src="assets/eylogo.png" alt="EY – Shape the future with confidence"
+                        class="process-advisors-logo">
+                </div>
             </div>
         </div>
     </section>
@@ -93,7 +117,8 @@
                 <h2>What It's About</h2>
             </div>
             <div class="awards-about-body">
-                <img src="assets/awards_show_event.png" alt="Times Study Abroad Awards Ceremony" class="awards-about-img">
+                <img src="assets/awards_show_event.png" alt="Times Study Abroad Awards Ceremony"
+                    class="awards-about-img">
                 <div class="awards-para-card">
                     <p>The Times Study Abroad Awards are designed to recognise what actually matters in global education
                         – credible outcomes, informed choices, and institutions that deliver on their promise. At a time
@@ -103,7 +128,8 @@
                 </div>
                 <div class="awards-para-card">
                     <p>The focus is on recognising institutions, organisations, and enablers that consistently deliver
-                        strong outcomes and uphold high standards across the study abroad ecosystem. Every recognition is
+                        strong outcomes and uphold high standards across the study abroad ecosystem. Every recognition
+                        is
                         backed by a structured evaluation process that looks beyond claims and factoring in outcomes,
                         consistency, and impact.</p>
                 </div>
@@ -150,27 +176,41 @@
         </div>
     </section>
 
-    <!-- Categories / Timeline / Entry Guidelines -->
-    <section class="section-padding fade-in-up" style="background: #ffffff;">
+    <!-- Award Categories -->
+    <section id="award-categories" class="award-categories-section section-padding fade-in-up"
+        style="background: #ffffff;">
         <div class="container">
-            <div class="awards-details-grid">
-                <div class="glass-card" style="padding: 2.5rem; text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1.2rem;">🗂️</div>
-                    <h3>Categories</h3>
-                    <span class="badge"
-                        style="background: #fef3c7; color: #b45309; margin-top: 0.75rem;">Announcing Soon</span>
+            <div class="section-header center-text">
+                <span class="badge">Award Categories</span>
+                <h2>Recognition Across <span class="accent-highlight">Three Pillars</span></h2>
+                <p class="lead-text" id="award-categories-subtitle">35 award categories across 3 segments</p>
+            </div>
+
+            <div class="award-categories-grid" id="award-categories-grid">
+                <!-- Loading state -->
+                <div class="award-categories-loading" id="award-categories-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading award categories…</p>
                 </div>
-                <div class="glass-card" style="padding: 2.5rem; text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1.2rem;">📅</div>
-                    <h3>Timeline</h3>
-                    <span class="badge"
-                        style="background: #fef3c7; color: #b45309; margin-top: 0.75rem;">Announcing Soon</span>
-                </div>
-                <div class="glass-card" style="padding: 2.5rem; text-align: center;">
-                    <div style="font-size: 2.5rem; margin-bottom: 1.2rem;">📋</div>
-                    <h3>Entry Guidelines</h3>
-                    <span class="badge"
-                        style="background: #fef3c7; color: #b45309; margin-top: 0.75rem;">Announcing Soon</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Choice Categories -->
+    <section id="editorial-choice" class="award-categories-section section-padding fade-in-up"
+        style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
+        <div class="container">
+            <div class="section-header center-text">
+                <span class="badge" style="background: #0f172a; color: white;">Editorial Choice</span>
+                <h2>Special <span class="accent-highlight">Recognition</span></h2>
+                <p class="lead-text" id="editorial-choice-subtitle">13 award categories curated by our editorial team</p>
+            </div>
+
+            <div class="award-categories-grid" id="editorial-choice-grid">
+                <!-- Loading state -->
+                <div class="award-categories-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading Editorial Choice awards…</p>
                 </div>
             </div>
         </div>
@@ -240,7 +280,8 @@
                 <details class="glass-card mb-1">
                     <summary>What happens after submission?</summary>
                     <div class="faq-content">
-                        <ul style="padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: 0.35rem;">
+                        <ul
+                            style="padding-left: 1.2rem; margin: 0; display: flex; flex-direction: column; gap: 0.35rem;">
                             <li>Applications will first be reviewed for eligibility and completeness.</li>
                             <li>Eligible entries will proceed to jury evaluation.</li>
                             <li>Shortlisted nominees may be contacted for clarification, if required.</li>
@@ -304,7 +345,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="contact-card" style="background: linear-gradient(135deg, #fffbeb, #fef3c7); border-color: #fde68a;">
+                <div class="contact-card"
+                    style="background: linear-gradient(135deg, #fffbeb, #fef3c7); border-color: #fde68a;">
                     <div class="contact-icon">⏰</div>
                     <div class="contact-info">
                         <span class="contact-role" style="color: #d97706;">Submission Deadline</span>
@@ -341,421 +383,20 @@
                 20, 2026</span>
         </div>
         <div style="display:flex; gap:0.75rem; flex-shrink:0;">
-            <a href="index.html" class="btn btn-outline"
-                style="padding:0.6rem 1.4rem; font-size:0.9rem;">Back to Conclave</a>
+            <a href="index.html" class="btn btn-outline" style="padding:0.6rem 1.4rem; font-size:0.9rem;">Back to
+                Conclave</a>
             <a href="mailto:sagun.kumari@timesinternet.in" class="btn btn-gradient"
                 style="padding:0.6rem 1.4rem; font-size:0.9rem; background: linear-gradient(135deg, #d97706, #f59e0b); color: white;">Nominate
                 Now</a>
         </div>
     </div>
 
+    <script src="categories-data.js"></script>
     <script src="script.js"></script>
 
-    <style>
-        /* Hero */
-        .awards-hero {
-            background: #0a0f1e;
-            min-height: 92vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 9rem 5% 5rem;
-            position: relative;
-            overflow: hidden;
-        }
 
-        /* Dot-grid texture overlay */
-        .awards-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-            background-size: 36px 36px;
-            pointer-events: none;
-            z-index: 0;
-        }
 
-        .awards-hero-accent-bar {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, #d97706, #fbbf24, #d97706);
-            z-index: 2;
-        }
 
-        /* Pulsing amber glow orbs */
-        .hero-glow-orb {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero-glow-orb--1 {
-            width: 640px;
-            height: 640px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: radial-gradient(ellipse, rgba(245, 158, 11, 0.13) 0%, rgba(251, 191, 36, 0.06) 40%, transparent 70%);
-            animation: ambientPulse 5s ease-in-out infinite alternate;
-        }
-
-        .hero-glow-orb--2 {
-            width: 960px;
-            height: 960px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: radial-gradient(ellipse, rgba(99, 102, 241, 0.05) 0%, transparent 60%);
-            animation: ambientPulse 8s ease-in-out infinite alternate-reverse;
-        }
-
-        @keyframes ambientPulse {
-            0%   { transform: translate(-50%, -50%) scale(0.88); opacity: 0.65; }
-            100% { transform: translate(-50%, -50%) scale(1.12); opacity: 1; }
-        }
-
-        /* Expanding decorative rings */
-        .hero-deco-ring {
-            position: absolute;
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 0;
-            border: 1px solid rgba(245, 158, 11, 0.09);
-        }
-
-        .hero-deco-ring--1 {
-            width: 480px;
-            height: 480px;
-            top: 50%;
-            left: 50%;
-            animation: ringPulse 6s ease-in-out infinite;
-        }
-
-        .hero-deco-ring--2 {
-            width: 760px;
-            height: 760px;
-            top: 50%;
-            left: 50%;
-            animation: ringPulse 6s ease-in-out infinite 2s;
-        }
-
-        @keyframes ringPulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: 0.5; }
-            50%       { transform: translate(-50%, -50%) scale(1.06); opacity: 0.1; }
-        }
-
-        /* Twinkling gold sparkle dots */
-        .hero-sparkles {
-            position: absolute;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero-sparkles span {
-            position: absolute;
-            display: block;
-            background: #fbbf24;
-            border-radius: 50%;
-            animation: twinkle 3s ease-in-out infinite;
-        }
-
-        .hero-sparkles span:nth-child(1) { width: 3px; height: 3px; top: 18%; left: 12%; animation-delay: 0s; }
-        .hero-sparkles span:nth-child(2) { width: 2px; height: 2px; top: 30%; left: 82%; animation-delay: 0.8s; }
-        .hero-sparkles span:nth-child(3) { width: 4px; height: 4px; top: 72%; left: 8%;  animation-delay: 1.4s; }
-        .hero-sparkles span:nth-child(4) { width: 2px; height: 2px; top: 14%; left: 68%; animation-delay: 0.4s; }
-        .hero-sparkles span:nth-child(5) { width: 3px; height: 3px; top: 78%; left: 78%; animation-delay: 2.1s; }
-        .hero-sparkles span:nth-child(6) { width: 2px; height: 2px; top: 52%; left: 92%; animation-delay: 1.0s; }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0;   transform: scale(0.4); }
-            50%       { opacity: 1;   transform: scale(1); }
-        }
-
-        /* What It's About */
-        .awards-about-body {
-            display: block;
-            max-width: 1000px;
-            margin: 2rem auto 0;
-        }
-
-        .awards-about-img {
-            float: right;
-            width: 45%;
-            max-width: 450px;
-            margin-left: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-            object-fit: cover;
-        }
-
-        .awards-para-card {
-            padding: 1.5rem 1.75rem;
-            border-left: 3px solid var(--primary-color, #f59e0b);
-            background: #f8fafc;
-            border-radius: 0 10px 10px 0;
-            margin-bottom: 1.25rem;
-        }
-
-        .awards-para-card p {
-            font-size: 1.05rem;
-            line-height: 1.85;
-            color: #334155;
-            margin: 0;
-        }
-
-        /* Categories / Timeline / Entry Guidelines */
-        .awards-details-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        /* Judging Process */
-        .judging-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .judging-card {
-            background: rgba(255, 255, 255, 0.05) !important;
-            border-color: rgba(255, 255, 255, 0.1) !important;
-            padding: 2.5rem;
-        }
-
-        .judging-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: #f59e0b;
-            line-height: 1;
-        }
-
-        /* Nominate contact */
-        .nominate-contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-            max-width: 680px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .contact-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2.5rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .contact-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
-            border-color: #bfdbfe;
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-role {
-            display: block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: #3b82f6;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-name {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 1.25rem;
-        }
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-        }
-
-        .contact-links a {
-            font-size: 0.9rem;
-            color: #64748b;
-            text-decoration: none;
-            transition: color 0.2s;
-            word-break: break-all;
-        }
-
-        .contact-links a:hover {
-            color: #3b82f6;
-        }
-
-        /* =============================================
-           RESPONSIVE — 5 BREAKPOINTS
-           ============================================= */
-
-        /* 1280px — Large tablets / small desktops */
-        @media (max-width: 1280px) {
-            .awards-about-img {
-                width: 40%;
-                max-width: 400px;
-            }
-
-            .judging-card {
-                padding: 2rem;
-            }
-        }
-
-        /* 1024px — Tablets landscape */
-        @media (max-width: 1024px) {
-            .awards-about-img {
-                width: 42%;
-                max-width: 360px;
-                margin-left: 1.5rem;
-            }
-
-            .judging-grid {
-                gap: 1.5rem;
-            }
-
-            .judging-card {
-                padding: 1.75rem;
-            }
-        }
-
-        /* 768px — Tablets portrait */
-        @media (max-width: 768px) {
-            .awards-hero {
-                min-height: auto;
-                padding: 7rem 5% 4rem;
-            }
-
-            .awards-about-img {
-                float: none;
-                width: 100%;
-                max-width: 100%;
-                margin-left: 0;
-                margin-bottom: 1.5rem;
-            }
-
-            .awards-details-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .judging-grid {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-                margin-top: 2rem;
-            }
-
-            .judging-number {
-                font-size: 2.8rem;
-            }
-
-            .nominate-contact-grid {
-                grid-template-columns: 1fr;
-                max-width: 420px;
-            }
-
-            /* Hide deadline sub-text in sticky footer to avoid overflow */
-            #sticky-footer > div:first-child > span:last-child {
-                display: none;
-            }
-        }
-
-        /* 480px — Phones */
-        @media (max-width: 480px) {
-            .awards-hero {
-                padding: 6rem 4% 3rem;
-            }
-
-            .awards-para-card {
-                padding: 1.25rem;
-            }
-
-            .awards-details-grid > .glass-card {
-                padding: 2rem 1.5rem !important;
-            }
-
-            .judging-card {
-                padding: 1.5rem 1.25rem;
-            }
-
-            .judging-number {
-                font-size: 2.2rem;
-            }
-
-            .contact-card {
-                padding: 2rem 1.25rem;
-            }
-
-            .nominate-contact-grid {
-                max-width: 100%;
-            }
-
-            /* Sticky footer: expand buttons full width */
-            #sticky-footer {
-                padding: 0.65rem 4% !important;
-            }
-
-            #sticky-footer > div:last-child {
-                width: 100%;
-                flex-shrink: 1 !important;
-            }
-
-            #sticky-footer > div:last-child a {
-                flex: 1;
-                text-align: center;
-                padding: 0.55rem 0.75rem !important;
-                font-size: 0.82rem !important;
-            }
-        }
-
-        /* 360px — Small phones */
-        @media (max-width: 360px) {
-            .awards-hero {
-                padding: 5.5rem 4% 2.5rem;
-            }
-
-            .awards-para-card {
-                padding: 1rem;
-            }
-
-            .awards-details-grid > .glass-card {
-                padding: 1.5rem 1rem !important;
-            }
-
-            .judging-card {
-                padding: 1.25rem 1rem;
-            }
-
-            .contact-card {
-                padding: 1.5rem 1rem;
-            }
-
-            .contact-name {
-                font-size: 1.05rem;
-            }
-        }
-    </style>
 
 </body>
 

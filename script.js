@@ -405,28 +405,20 @@ document.addEventListener('DOMContentLoaded', function () {
     const officialSvgs = [
         '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.66 2.69 3 6 3s6-1.34 6-3v-5"/></svg>',
         '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v2"/></svg>',
-        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>'
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'
     ];
     const officialDescriptors = [
         'Recognising institutions delivering world-class education, research, and global learning experiences.',
         'Celebrating excellence in affordability, career outcomes, and financial empowerment for students.',
-        'Honouring institutions that prioritise student safety, well-being, and cultural belonging.'
+        'Honouring institutions that prioritise student safety, well-being, and cultural belonging.',
+        'Recognising pathways, partnerships, and programmes that connect India with global education.',
+        'Curated by our editorial board to recognise destinations that stand out for their commitment to Indian students.'
     ];
 
     if (window.AWARD_CATEGORIES_DATA) {
         createAwardCategoryRenderer('award-categories-grid', window.AWARD_CATEGORIES_DATA, officialSvgs, officialDescriptors, 'award-categories-subtitle');
-    }
-
-    // 2. Editorial Choice
-    const editorialSvgs = [
-        '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'
-    ];
-    const editorialDescriptors = [
-        'Curated by our editorial board to recognize destinations and frameworks that stand out for their commitment to Indian students.'
-    ];
-
-    if (window.EDITORIAL_CHOICE_DATA) {
-        createAwardCategoryRenderer('editorial-choice-grid', window.EDITORIAL_CHOICE_DATA, editorialSvgs, editorialDescriptors, 'editorial-choice-subtitle');
     }
 
 })();

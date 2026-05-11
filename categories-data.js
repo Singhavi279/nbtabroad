@@ -5,7 +5,7 @@ window.AWARD_CATEGORIES_DATA = {
             "categories": [
                 {
                     "category": "Leading Global University for students",
-                    "definition": "Recognizes an institute that has demonstrated exceptional commitment to delivering high-quality international education tailored to the academic, cultural, and holistic needs of students.",
+                    "definition": "Recognizes an institution that has demonstrated exceptional commitment to delivering high-quality international education, student support, and engagement tailored to the academic, cultural, and holistic needs of Indian students.",
                     "eligibility": [
                         "Enrolled Indian student cohort over the last 2 intakes",
                         "Dedicated India engagement or student support mechanism"
@@ -58,7 +58,7 @@ window.AWARD_CATEGORIES_DATA = {
                     "category": "Excellence in Emerging Global Institution",
                     "definition": "Recognizes newer or fast-growing institutions demonstrating innovation and growing international engagement for students.",
                     "eligibility": [
-                        "Up to 5 years of existence as of March 31, 2026"
+                        "Up to 7 years of existence as of March 31, 2026"
                     ],
                     "whoCanApply": [
                         "Young international universities",
@@ -66,26 +66,26 @@ window.AWARD_CATEGORIES_DATA = {
                     ]
                 },
                 {
-                    "category": "Excellence in Academic Partnerships",
-                    "definition": "Recognizes institutions that demonstrate sustained and high-quality academic collaborations with international partners, particularly Indian institutions.",
-                    "eligibility": [
-                        "Active MOUs or articulation pathways with Indian partners",
-                        "Academic outcomes only",
-                        "Minimum 3 years partnership maturity as of March 31, 2026"
-                    ],
-                    "whoCanApply": [
-                        "Universities with Indian partner institutions"
-                    ]
-                },
-                {
                     "category": "Excellence in Global Mobility & Exchange Programs",
-                    "definition": "Recognizes institutions that excel in promoting international academic mobility through student exchange programs, dual degrees, and short-term study abroad options for students.",
+                    "definition": "Recognizes institutions that excel in promoting international academic mobility through student exchange programs, dual degrees, short-term study abroad options for students.",
                     "eligibility": [
                         "Active international exchange, mobility, or study-abroad programs for students",
                         "Formal academic partnerships supporting exchanges, dual degrees, or short-term mobility"
                     ],
                     "whoCanApply": [
                         "Universities with active exchange programs for students"
+                    ]
+                },
+                {
+                    "category": "Excellence in Academic Partnerships",
+                    "definition": "Recognizes institutions that demonstrate sustained and high-quality academic collaborations with international partners, particularly Indian institutions.",
+                    "eligibility": [
+                        "Active MOUs or articulation pathways with Indian partners",
+                        "Academic outcomes only, excluding commercial recruitment or agency-led partnerships",
+                        "Minimum 3 years partnership maturity as of March 31, 2026"
+                    ],
+                    "whoCanApply": [
+                        "Universities with Indian partner institutions"
                     ]
                 },
                 {
@@ -105,37 +105,6 @@ window.AWARD_CATEGORIES_DATA = {
                     ]
                 },
                 {
-                    "category": "Excellence in Computer Science, AI & Data Science Education",
-                    "definition": "Recognises institutions with strong AI, computer science, analytics and emerging technology education.",
-                    "eligibility": [
-                        "Accredited programmes",
-                        "Labs or research centres",
-                        "Industry projects",
-                        "Employability outcomes",
-                        "Indian/international student access"
-                    ],
-                    "whoCanApply": [
-                        "Technology universities",
-                        "Research universities",
-                        "STEM institutes"
-                    ]
-                },
-                {
-                    "category": "Excellence in Research & PhD Ecosystem",
-                    "definition": "Recognises universities that support research scholars through funding, supervision, labs and publication/innovation outcomes.",
-                    "eligibility": [
-                        "Active doctoral programmes",
-                        "Research funding",
-                        "Supervisor capacity",
-                        "International student participation",
-                        "Publications, patents, or research partnerships"
-                    ],
-                    "whoCanApply": [
-                        "Research universities",
-                        "Graduate schools"
-                    ]
-                },
-                {
                     "category": "Excellence in Law, Public Policy & Governance Education",
                     "definition": "Recognises institutions building global legal, public policy and governance careers.",
                     "eligibility": [
@@ -148,53 +117,6 @@ window.AWARD_CATEGORIES_DATA = {
                         "Law schools",
                         "Public policy schools",
                         "Universities"
-                    ]
-                },
-                {
-                    "category": "Excellence in Design, Creative Arts & Media Education",
-                    "definition": "Recognises institutions offering strong global creative education in design, media, communication, gaming, animation, music or performing arts.",
-                    "eligibility": [
-                        "Programme accreditation or recognition",
-                        "Studios or labs",
-                        "Portfolio or employer outcomes",
-                        "International student support"
-                    ],
-                    "whoCanApply": [
-                        "Design schools",
-                        "Creative arts universities",
-                        "Media schools"
-                    ]
-                },
-                {
-                    "category": "Best Community College / Pathway Institution for Indian Students",
-                    "definition": "Recognises institutions offering credible pathway, transfer or associate-degree routes into global higher education.",
-                    "eligibility": [
-                        "Recognised institution",
-                        "Articulation or transfer pathways",
-                        "Student counselling",
-                        "Progression outcomes",
-                        "Affordability transparency"
-                    ],
-                    "whoCanApply": [
-                        "Community colleges",
-                        "Pathway colleges",
-                        "Foundation programme providers"
-                    ]
-                },
-                {
-                    "category": "Excellence in Online, Hybrid & Transnational Learning",
-                    "definition": "Recognises institutions offering credible digital, blended, offshore or transnational learning options with global progression.",
-                    "eligibility": [
-                        "Programme recognition",
-                        "Learning support",
-                        "Assessment integrity",
-                        "Student outcomes",
-                        "Credit/degree clarity"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Pathway providers",
-                        "Online learning institutions"
                     ]
                 }
             ]
@@ -247,8 +169,8 @@ window.AWARD_CATEGORIES_DATA = {
                     ]
                 },
                 {
-                    "category": "Best Affordability & Cost Transparency by Institution",
-                    "definition": "Recognises institutions providing transparent total-cost guidance beyond tuition.",
+                    "category": "Affordability & Cost Transparency by Institution",
+                    "definition": "Recognises institutions that proactively offer transparent and comprehensive information on all education-related costs, enabling students to clearly understand expenses beyond tuition fees.",
                     "eligibility": [
                         "Published tuition, living cost, housing, insurance, scholarship and hidden-cost guidance",
                         "Fee refund policy",
@@ -261,82 +183,17 @@ window.AWARD_CATEGORIES_DATA = {
                     ]
                 },
                 {
-                    "category": "Excellence in Education Loan Facilitation",
-                    "definition": "Recognises institutions/partners helping students access transparent and responsible education finance.",
+                    "category": "Excellence in Post-Study Work & Career Pathways",
+                    "definition": "Recognises institutions that provide clear, structured, and outcome-oriented post-study work opportunities and career transition pathways, enabling Indian students to move smoothly from education to employment.",
                     "eligibility": [
-                        "Bank, NBFC, or partner tie-ups",
-                        "Transparent documentation",
-                        "No-mis-selling declaration",
-                        "Student support",
-                        "Disbursement timelines"
+                        "Clearly defined post-study work opportunities or employment pathways",
+                        "Transparent communication on work rights, duration, and eligibility",
+                        "Evidence of student career outcomes or employer engagement"
                     ],
                     "whoCanApply": [
                         "Universities",
-                        "Banks/NBFCs",
-                        "Fintechs",
-                        "Financial aid offices"
-                    ]
-                },
-                {
-                    "category": "Best ROI & Employability Outcomes for Indian Students",
-                    "definition": "Recognises institutions that demonstrate career value for Indian students relative to cost and outcomes.",
-                    "eligibility": [
-                        "Indian/international graduate outcomes",
-                        "Salary or placement data where available",
-                        "Internship or employer partnerships",
-                        "Tuition/cost transparency"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Career offices",
-                        "Graduate schools"
-                    ]
-                },
-                {
-                    "category": "Excellence in Part-Time Work & Work-Rights Guidance",
-                    "definition": "Recognises institutions that educate students on lawful part-time work, internships and compliance.",
-                    "eligibility": [
-                        "Guidance on legal work hours/conditions",
-                        "Compliance sessions",
-                        "Employer support",
-                        "No adverse misguidance record"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "International student offices",
-                        "Career services"
-                    ]
-                },
-                {
-                    "category": "Best Entrepreneurship & Start-up Support for Indian Students",
-                    "definition": "Recognises institutions enabling students through incubators, innovation grants, mentoring and founder pathways.",
-                    "eligibility": [
-                        "Incubator or accelerator access",
-                        "Mentoring",
-                        "Funding opportunities",
-                        "Indian/international student participation",
-                        "Visa compliance guidance"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Business schools",
-                        "Incubators"
-                    ]
-                },
-                {
-                    "category": "Best Alumni Mentorship for Indian Students",
-                    "definition": "Recognises structured alumni mentoring, not only size of alumni network.",
-                    "eligibility": [
-                        "Active mentor database",
-                        "Structured matching",
-                        "Indian alumni participation",
-                        "Mentoring outcomes",
-                        "Career events"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Alumni offices",
-                        "Indian alumni associations"
+                        "Colleges",
+                        "Destination education bodies"
                     ]
                 }
             ]
@@ -402,22 +259,6 @@ window.AWARD_CATEGORIES_DATA = {
                     ]
                 },
                 {
-                    "category": "Excellence in Housing & Arrival Support",
-                    "definition": "Recognises institutions that support safe accommodation, airport arrival, local registration, banking/SIM and initial settlement.",
-                    "eligibility": [
-                        "Accommodation guidance",
-                        "Verified housing support",
-                        "Arrival programme",
-                        "Emergency contacts",
-                        "Parent/student communication"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Colleges",
-                        "Pathway providers"
-                    ]
-                },
-                {
                     "category": "Excellence in Student Safety & Emergency Response",
                     "definition": "Recognises institutions with strong campus safety, emergency response, crisis support and Indian student communication.",
                     "eligibility": [
@@ -432,79 +273,73 @@ window.AWARD_CATEGORIES_DATA = {
                         "Colleges",
                         "Student support offices"
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "segment": "India Pathways & Institutional Collaboration",
+            "categories": [
                 {
-                    "category": "Excellence in Anti-Discrimination & Grievance Redressal",
-                    "definition": "Recognises institutions with structured response to discrimination, harassment, racism, exploitation or adverse student experiences.",
+                    "category": "Excellence in India-Global Pathway Programme",
+                    "definition": "Recognizes institutions that design and deliver high-quality India-based pathway programmes enabling smooth transition of students into global degree programmes. These pathways must demonstrate academic alignment, student readiness, and successful progression outcomes.",
                     "eligibility": [
-                        "Documented anti-discrimination policy",
-                        "Grievance mechanism",
-                        "Response timelines",
-                        "Anonymous reporting",
-                        "Student awareness"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Colleges",
-                        "Student unions/support offices"
-                    ]
-                },
-                {
-                    "category": "Best Parent Communication & Family Assurance Programme",
-                    "definition": "Recognises institutions that responsibly inform and reassure parents/families during pre-arrival, emergencies and student transition.",
-                    "eligibility": [
-                        "Parent-facing orientation/resources",
-                        "Emergency communication protocol",
-                        "Consent-aware communication policy",
-                        "Regular support updates"
+                        "Active India-based pathway programme(s) leading to overseas degree progression",
+                        "Structured curriculum aligned with partner university standards",
+                        "Demonstrated student progression and success outcomes"
                     ],
                     "whoCanApply": [
                         "Universities",
                         "Pathway providers",
-                        "Student support teams"
+                        "International colleges",
+                        "Indian institutions offering pathway programmes"
                     ]
                 },
                 {
-                    "category": "Excellence in Women Student Support & Safety",
-                    "definition": "Recognises institutions with dedicated safeguards, counselling, accommodation and safety support for women international students.",
+                    "category": "Excellence in Credit Transfer Partnership",
+                    "definition": "Recognizes institutions that have built strong, transparent, and student-friendly credit transfer arrangements between Indian and international institutions, enabling academic mobility and credit recognition.",
                     "eligibility": [
-                        "Women-student support policy",
-                        "Safe housing guidance",
-                        "Emergency support",
-                        "Harassment reporting",
-                        "Mentorship/community programmes"
+                        "Formal credit transfer agreements with Indian/global partners",
+                        "Clearly defined credit equivalence and transfer policies",
+                        "Evidence of successful student transfers and academic continuity"
                     ],
                     "whoCanApply": [
                         "Universities",
+                        "Indian institutions",
+                        "International partner institutions with articulation or transfer agreements"
+                    ]
+                },
+                {
+                    "category": "Excellence in Joint/Dual Degree Model",
+                    "definition": "Recognizes institutions offering well-structured joint or dual degree programmes that provide integrated academic experiences across institutions and geographies.",
+                    "eligibility": [
+                        "Active joint or dual degree programme(s) with international partners",
+                        "Clearly defined academic structure, mobility component, and degree recognition",
+                        "Evidence of student enrolment and completion"
+                    ],
+                    "whoCanApply": [
+                        "Universities",
+                        "Higher education institutions with dual/joint degree collaborations"
+                    ]
+                },
+                {
+                    "category": "Excellence in Indian Institution for Global Mobility",
+                    "definition": "Recognizes Indian institutions that actively enable outbound student mobility through international partnerships, pathway models, exchange programmes, or articulation agreements.",
+                    "eligibility": [
+                        "Active international collaborations enabling outbound mobility",
+                        "Structured pathways such as credit transfer, twinning, or dual degree programmes",
+                        "Demonstrated student participation in global mobility programmes"
+                    ],
+                    "whoCanApply": [
+                        "Indian universities",
                         "Colleges",
-                        "Student welfare offices"
-                    ]
-                },
-                {
-                    "category": "Excellence in Indian Food, Faith & Cultural Inclusion",
-                    "definition": "Recognises institutions that support cultural belonging through food, festival, prayer/faith inclusion and community life.",
-                    "eligibility": [
-                        "Evidence of Indian/vegetarian food access",
-                        "Cultural festivals",
-                        "Student associations",
-                        "Inclusion facilities",
-                        "Participation"
-                    ],
-                    "whoCanApply": [
-                        "Universities",
-                        "Campus dining/student services",
-                        "Student bodies"
+                        "Deemed universities",
+                        "Private institutions with global partnerships"
                     ]
                 }
             ]
-        }
-    ]
-};
-
-window.EDITORIAL_CHOICE_DATA = {
-    "segments": [
+        },
         {
-            "segment": "Editorial Choice",
+            "segment": "Editorial's Choice",
             "categories": [
                 {
                     "category": "Indian Student-Friendly Study Destination of the Year",
@@ -521,7 +356,7 @@ window.EDITORIAL_CHOICE_DATA = {
                     ]
                 },
                 {
-                    "category": "Best Student-Friendly Visa Process",
+                    "category": "Excellence in Student-Friendly Visa Process",
                     "definition": "Recognises a destination with transparent, predictable and student-friendly visa guidance and documentation support.",
                     "eligibility": [
                         "Applicant must show current official student visa rules",
@@ -535,21 +370,6 @@ window.EDITORIAL_CHOICE_DATA = {
                         "Embassy/high commission",
                         "Authorised visa facilitation entity",
                         "Destination education agency"
-                    ]
-                },
-                {
-                    "category": "Best Post-Study Work & Career Pathway Destination",
-                    "definition": "Recognises a country with clear work-rights, post-study stay, graduate employment and transition pathways for international students.",
-                    "eligibility": [
-                        "Must provide current post-study work rules",
-                        "Graduate eligibility rules",
-                        "Work-right communication",
-                        "Evidence of career/employer ecosystem for international graduates"
-                    ],
-                    "whoCanApply": [
-                        "Country education board",
-                        "Embassy/high commission",
-                        "Ministry-backed international education office"
                     ]
                 },
                 {
@@ -570,36 +390,7 @@ window.EDITORIAL_CHOICE_DATA = {
                     ]
                 },
                 {
-                    "category": "Lowest Verified Grievance Burden for Indian Students",
-                    "definition": "Recognises destinations that demonstrate comparatively low verified Indian-student distress/grievance incidence and strong reporting/redressal systems.",
-                    "eligibility": [
-                        "Must provide evidence or official/third-party documentation on grievance volumes, mechanisms and resolution process",
-                        "Student population base should be available for rate calculation"
-                    ],
-                    "whoCanApply": [
-                        "Country offices",
-                        "Embassies/high commissions",
-                        "Education agencies",
-                        "Government-backed bodies"
-                    ]
-                },
-                {
-                    "category": "Best Embassy/Consular Student Support Framework",
-                    "definition": "Recognises the most proactive official student support framework for Indian students abroad.",
-                    "eligibility": [
-                        "Must demonstrate student registration drives",
-                        "Open houses",
-                        "Emergency helplines",
-                        "WhatsApp/community groups",
-                        "Consular camps or structured communication with Indian student bodies"
-                    ],
-                    "whoCanApply": [
-                        "Embassies/consulates/high commissions",
-                        "Official student support missions"
-                    ]
-                },
-                {
-                    "category": "Best Country for Affordable Study & Living",
+                    "category": "Country for Affordable Study & Living",
                     "definition": "Recognises a destination offering transparent and comparatively affordable tuition, living costs, student discounts and value-for-money education.",
                     "eligibility": [
                         "Must provide evidence of tuition bands",
@@ -615,72 +406,7 @@ window.EDITORIAL_CHOICE_DATA = {
                     ]
                 },
                 {
-                    "category": "Best Student Travel & Connectivity Destination",
-                    "definition": "Recognises destinations with convenient travel connectivity, student travel guidance and arrival infrastructure for Indian students.",
-                    "eligibility": [
-                        "Must demonstrate air connectivity",
-                        "Airport arrival support",
-                        "Public transport guidance",
-                        "Student travel concessions",
-                        "Official arrival resources"
-                    ],
-                    "whoCanApply": [
-                        "Country tourism/education boards",
-                        "Embassies",
-                        "Airlines/travel partners linked to destination campaigns"
-                    ]
-                },
-                {
-                    "category": "Best Destination for Indian Medical Students",
-                    "definition": "Recognises a country with credible medical education pathways, transparent recognition/licensing guidance and strong student protection.",
-                    "eligibility": [
-                        "Must show recognised medical institutions",
-                        "Clear eligibility/licensing guidance for Indian students",
-                        "Clinical exposure framework",
-                        "Student welfare mechanisms"
-                    ],
-                    "whoCanApply": [
-                        "Embassy/country education bodies",
-                        "Medical university consortiums",
-                        "Ministries",
-                        "Recognised medical education promotion bodies"
-                    ]
-                },
-                {
-                    "category": "Best Destination for STEM, Research & Innovation",
-                    "definition": "Recognises a country offering strong research, STEM, lab access, scholarships and innovation opportunities for Indian students.",
-                    "eligibility": [
-                        "Must provide evidence of STEM/research enrolment pathways",
-                        "Scholarships/funding",
-                        "Research labs",
-                        "University-industry linkages",
-                        "Indian student participation"
-                    ],
-                    "whoCanApply": [
-                        "Country education board",
-                        "Science/innovation agency",
-                        "Embassy education wing"
-                    ]
-                },
-                {
-                    "category": "Best Destination for Women Student Safety & Support",
-                    "definition": "Recognises a destination with strong safeguards, campus/city safety support and targeted support for women international students.",
-                    "eligibility": [
-                        "Must show women-student safety policies",
-                        "Emergency support",
-                        "Campus safety integration",
-                        "Community support",
-                        "Guidance for housing/travel safety"
-                    ],
-                    "whoCanApply": [
-                        "Country bodies",
-                        "University consortiums",
-                        "Embassies",
-                        "Official student welfare offices"
-                    ]
-                },
-                {
-                    "category": "Best Destination for Indian Student Community & Cultural Integration",
+                    "category": "Destination for Indian Student Community & Cultural Integration",
                     "definition": "Recognises a destination with strong Indian student associations, cultural inclusion and community integration.",
                     "eligibility": [
                         "Must demonstrate active Indian student communities",
@@ -693,22 +419,6 @@ window.EDITORIAL_CHOICE_DATA = {
                         "Universities consortiums",
                         "Student associations",
                         "Embassies"
-                    ]
-                },
-                {
-                    "category": "Best Country-Level Scholarship & Funding Ecosystem",
-                    "definition": "Recognises a destination with structured scholarships, grants and transparent funding access for Indian students.",
-                    "eligibility": [
-                        "Must provide official scholarship/funding information",
-                        "Eligibility transparency",
-                        "Award quantum",
-                        "Indian-student access evidence"
-                    ],
-                    "whoCanApply": [
-                        "Government education offices",
-                        "Scholarship agencies",
-                        "Embassies",
-                        "University consortiums"
                     ]
                 }
             ]

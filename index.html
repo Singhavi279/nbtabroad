@@ -8,7 +8,10 @@
     <meta name="description"
         content="India's most credible platform for global education discovery. Bring truth, transparency, and career-first guidance into global education decisions.">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&family=Patrick+Hand&display=swap"
         rel="stylesheet">
 </head>
 
@@ -16,9 +19,8 @@
 
     <!-- Navigation -->
     <nav class="navbar glass">
-        <div class="logo"><img
-                src="https://static.langimg.com/thumb/119164302/navbharat-times.jpg?width=366&resizemode=4"
-                alt="Navbharat Times" style="max-height: 45px; vertical-align: middle;"></div>
+        <a href="index.html" class="logo" aria-label="Times Study Abroad Conclave 2026"><img
+                src="https://timesinternet.in/assets/images/logo-blue-new.png" alt="Times Internet"></a>
 
         <ul class="nav-links">
             <li><a href="#" style="font-weight: 700;">TSAC 2026</a></li>
@@ -30,7 +32,23 @@
             <li><a href="#faq">FAQs</a></li>
         </ul>
         <button onclick="openModal()" class="btn btn-primary nav-cta">Register Now</button>
+        <!-- Hamburger (mobile only) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+    <!-- Mobile nav drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <a href="#" style="font-weight: 700;">TSAC 2026</a>
+        <a href="#event-snapshot">Event Snapshot</a>
+        <a href="#tracks">Conversation Tracks</a>
+        <a href="#attendees">Attend</a>
+        <a href="#partners">Partner</a>
+        <a href="awards.html">Awards</a>
+        <a href="#faq">FAQs</a>
+        <button onclick="openModal()" class="btn btn-primary"
+            style="margin-top: 0.5rem; text-align: center; border: none; width: 100%;">Register Now</button>
+    </div>
 
 
     <!-- Exit Intent Popup -->
@@ -47,34 +65,39 @@
     <!-- 1. Hero Section -->
     <section id="hero" class="hero fade-in-up">
         <div class="hero-bg">
-            <img src="assets/hero_indian_students.png" alt="Indian students at foreign university"
-                style="object-position: right center;">
+            <img src="assets/hero_indian_students.jpg" alt="Indian students at foreign university">
         </div>
         <div class="hero-container">
             <div class="hero-content glass-panel editorial-theme" style="position: relative;">
                 <span class="nav-hashtag" style="position: absolute; top: 1.5rem; right: 2rem;">#TimesStudyAbroad</span>
-                <h1 style="margin-bottom: 1rem; line-height: 1.2;">
-                    <span style="display: block; font-size: 2.8rem; font-weight: 800; color: #0f172a;">Times</span>
-                    <span
-                        style="display: block; font-size: 3.8rem; font-weight: 700; color: var(--primary-color);">Study
-                        Abroad Conclave</span>
-                </h1>
+                <div style="margin-bottom: 1rem;">
+                    <img src="assets/tsac-logo.png" alt="Times Study Abroad Conclave 2026"
+                        style="max-width: 320px; width: 100%; height: auto; display: block;">
+                </div>
                 <p>India's most credible platform for global education discovery where students, parents, and experts
                     come together to make informed, future-ready decisions.</p>
                 <div class="mt-2 mb-2">
                     <span class="glass-card"
-                        style="display: inline-block; padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); white-space: nowrap;"><strong>July
-                            4, 2026 | Shangri-La Eros, New Delhi</strong></span>
+                        style="display: inline-block; padding: 0.6rem 1.2rem; background: rgba(255,255,255,0.9); max-width: 100%;"><strong>July
+                            2026 | Shangri-La Eros, New Delhi</strong></span>
                 </div>
-                <div class="supporting-line">Summit · Expo · Masterclasses · <a href="awards.html" style="color: inherit; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 1px;">Awards</a></div>
+                <div class="supporting-line">Summit · Expo · Masterclasses · <a href="awards.html"
+                        style="color: inherit; text-decoration: none; border-bottom: 2px solid currentColor; padding-bottom: 1px;">Awards</a>
+                </div>
                 <div class="cta-group">
                     <button onclick="openModal()" class="btn btn-gradient">Register Now</button>
                     <a href="#experience" class="btn btn-outline"> Partner With Us</a>
                 </div>
                 <div class="trust-strip mt-2">
-                    <p style="font-size: 1.6rem; margin: 0;"><strong>Powered by <img
-                                src="https://timesinternet.in/assets/images/logo-blue-new.png" alt="Times Internet"
-                                style="height: 1.2em; vertical-align: middle; display: inline-block;"></strong></p>
+                    <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                        <span
+                            style="font-size: 1.1rem; font-weight: 700; color: #444; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap;">An
+                            initiative by</span>
+                        <img src="https://static.langimg.com/thumb/119164302/navbharat-times.jpg?width=366&resizemode=4"
+                            alt="Navbharat Times" style="height: 3.5rem; width: auto; max-width: none;">
+                        <img src="assets/live.png" alt="Times Live"
+                            style="height: 4.5rem; width: auto; object-fit: contain;">
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,7 +150,7 @@
 
             <div class="grid-two" style="gap: 3rem; align-items: stretch;">
                 <div class="image-content mobile-order-last" style="display: flex;">
-                    <img src="assets/expoabroad.png" alt="Times Study Abroad Conclave"
+                    <img src="assets/expoabroad.png" alt="Times Study Abroad Conclave" loading="lazy"
                         style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 300px;">
                 </div>
                 <div class="text-content mobile-order-first"
@@ -139,7 +162,9 @@
                         conversations on global education, employability, policy, and future skills; the
                         <strong>Expo</strong> featuring verified universities and country bodies for real engagement;
                         practical <strong>Masterclasses</strong> on scholarships, visas, ROI, and career mapping; and
-                        the <a href="awards.html" style="color: inherit; text-decoration: none;"><strong>Awards</strong></a> recognising trust, transparency, and student-first excellence in
+                        the <a href="awards.html"
+                            style="color: inherit; text-decoration: none;"><strong>Awards</strong></a> recognising
+                        trust, transparency, and student-first excellence in
                         global education.
                     </p>
                     <p style="color: #222; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">The conclave
@@ -191,7 +216,9 @@
                 <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🏆 Awards</h3>
                     <p>Recognising trust, transparency, and student-first excellence in global education.</p>
-                    <a href="awards.html" style="margin-top: auto; padding-top: 1rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: inline-block; letter-spacing: 0.01em;">Explore Awards →</a>
+                    <a href="awards.html"
+                        style="margin-top: auto; padding-top: 1rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: inline-block; letter-spacing: 0.01em;">Explore
+                        Awards →</a>
                 </div>
                 <!-- Duplicated for seamless loop -->
                 <div class="bento-item glass-card editorial-card marquee-card">
@@ -209,7 +236,9 @@
                 <div class="bento-item glass-card editorial-card marquee-card">
                     <h3>🏆 Awards</h3>
                     <p>Recognising trust, transparency, and student-first excellence in global education.</p>
-                    <a href="awards.html" style="margin-top: auto; padding-top: 1rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: inline-block; letter-spacing: 0.01em;">Explore Awards →</a>
+                    <a href="awards.html"
+                        style="margin-top: auto; padding-top: 1rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; display: inline-block; letter-spacing: 0.01em;">Explore
+                        Awards →</a>
                 </div>
             </div>
         </div>
@@ -226,6 +255,7 @@
                 display: flex;
                 gap: 1.5rem;
                 width: max-content;
+                align-items: stretch;
                 animation: marquee-scroll 18s linear infinite;
             }
 
@@ -236,6 +266,9 @@
             .marquee-card {
                 width: 320px;
                 flex-shrink: 0;
+                height: auto; /* override editorial-card's height:100% so flex stretch equalizes */
+                display: flex;
+                flex-direction: column;
             }
 
             @keyframes marquee-scroll {
@@ -328,10 +361,10 @@
 
     <!-- 7. Why To Attend — Immersive Full-Width Section -->
     <section class="fade-in-up"
-        style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 3rem 5%; position: relative; overflow: hidden;">
+        style="background: linear-gradient(135deg, #1a1a1a 0%, #1e293b 100%); padding: 3rem 5%; position: relative; overflow: hidden;">
         <!-- Decorative accent -->
         <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), #6366f1);">
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end), #695ea9);">
         </div>
 
         <div class="container">
@@ -340,7 +373,7 @@
                 <div>
                     <span class="badge light-badge" style="margin-bottom: 1.5rem;">Why Attend</span>
                     <h2 style="color: white; font-size: 2.8rem; line-height: 1.15; margin-bottom: 1.5rem;">Clarity
-                        you<br><span style="color: #60a5fa;">cannot get online</span></h2>
+                        you<br><span style="color: #a89cd1;">cannot get online</span></h2>
                     <p style="color: rgba(255,255,255,0.7); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2rem;">
                         One day that replaces months of confusion, conflicting advice,<br>and second-guessing.</p>
                 </div>
@@ -351,37 +384,37 @@
                         style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem;">
                         <li
                             style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: #54aba5; font-size: 1.3rem; flex-shrink: 0;">✔</span>
                             <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Get trusted guidance in a
                                 sea of misinformation</span>
                         </li>
                         <li
                             style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: #54aba5; font-size: 1.3rem; flex-shrink: 0;">✔</span>
                             <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Access verified universities
                                 &amp; partners</span>
                         </li>
                         <li
                             style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: #54aba5; font-size: 1.3rem; flex-shrink: 0;">✔</span>
                             <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Learn from national-level
                                 expert discussions</span>
                         </li>
                         <li
                             style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: #54aba5; font-size: 1.3rem; flex-shrink: 0;">✔</span>
                             <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Practical masterclasses for
                                 real decision-making</span>
                         </li>
                         <li
                             style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: #54aba5; font-size: 1.3rem; flex-shrink: 0;">✔</span>
                             <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">Clarity on costs, ROI &amp;
                                 long-term career outcomes</span>
                         </li>
                         <li
                             style="display: flex; align-items: flex-start; gap: 1rem; padding: 1rem 1.2rem; background: rgba(255,255,255,0.04); border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-                            <span style="color: #10b981; font-size: 1.3rem; flex-shrink: 0;">✔</span>
+                            <span style="color: #54aba5; font-size: 1.3rem; flex-shrink: 0;">✔</span>
                             <span style="color: rgba(255,255,255,0.9); font-size: 1.05rem;">A one-stop trusted platform
                                 for the entire family</span>
                         </li>
@@ -395,12 +428,12 @@
     <section id="partners" class="fade-in-up"
         style="background: #ffffff; padding: 3rem 0; position: relative; overflow: hidden; border-top: 1px solid #e2e8f0;">
         <div
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #3b82f6, #6366f1, #0055ff);">
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #54aba5, #695ea9, #695ea9);">
         </div>
 
         <!-- Full-width headline -->
         <h2
-            style="font-size: clamp(1.8rem, 4vw, 4rem); font-weight: 800; padding: 0 5%; margin: 0 0 4rem; line-height: 1.15; color: #0f172a;">
+            style="font-size: clamp(1.8rem, 4vw, 4rem); font-weight: 800; padding: 0 5%; margin: 0 0 4rem; line-height: 1.15; color: #1a1a1a;">
             Partner with India's most credible <span style="color: var(--primary-color);">global education discovery
                 platform</span></h2>
 
@@ -428,41 +461,41 @@
             </style>
 
             <div
-                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #fdf6ee;">
                 <div
                     style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                    <svg width="22" height="22" fill="none" stroke="#54aba5" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <path
                             d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
                     </svg>
                 </div>
                 <div>
-                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Premium on-ground
+                    <p style="color: #1a1a1a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Premium on-ground
                         presence that signals category leadership</p>
                 </div>
             </div>
 
             <div
-                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #fdf6ee;">
                 <div
                     style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                    <svg width="22" height="22" fill="none" stroke="#54aba5" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                     </svg>
                 </div>
                 <div>
-                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Thought leadership
+                    <p style="color: #1a1a1a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Thought leadership
                         that builds credibility, not just awareness</p>
                 </div>
             </div>
 
             <div
-                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #fdf6ee;">
                 <div
                     style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                    <svg width="22" height="22" fill="none" stroke="#54aba5" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                         <circle cx="9" cy="7" r="4" />
@@ -471,54 +504,54 @@
                     </svg>
                 </div>
                 <div>
-                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Direct interaction
+                    <p style="color: #1a1a1a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Direct interaction
                         with families making real decisions</p>
                 </div>
             </div>
 
             <div
-                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #fdf6ee;">
                 <div
                     style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                    <svg width="22" height="22" fill="none" stroke="#54aba5" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
                     </svg>
                 </div>
                 <div>
-                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Verified, opt-in
+                    <p style="color: #1a1a1a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Verified, opt-in
                         lead generation you can actually use</p>
                 </div>
             </div>
 
             <div
-                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #fdf6ee;">
                 <div
                     style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                    <svg width="22" height="22" fill="none" stroke="#54aba5" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <rect x="3" y="3" width="18" height="18" rx="2" />
                         <path d="M3 9h18M9 21V9" />
                     </svg>
                 </div>
                 <div>
-                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Long-term brand
+                    <p style="color: #1a1a1a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Long-term brand
                         authority in a high-stakes category</p>
                 </div>
             </div>
 
             <div
-                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #f8fafc;">
+                style="display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.5rem; border: 1px solid #e2e8f0; border-radius: 14px; background: #fdf6ee;">
                 <div
                     style="flex-shrink: 0; width: 44px; height: 44px; background: #eff6ff; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
-                    <svg width="22" height="22" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round"
+                    <svg width="22" height="22" fill="none" stroke="#54aba5" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" viewBox="0 0 24 24">
                         <circle cx="12" cy="12" r="10" />
                         <path d="M12 8v4l3 3" />
                     </svg>
                 </div>
                 <div>
-                    <p style="color: #0f172a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Opportunity to
+                    <p style="color: #1a1a1a; font-weight: 700; margin: 0 0 0.4rem; font-size: 1rem;">Opportunity to
                         showcase products in real decision moments</p>
                 </div>
             </div>
@@ -532,11 +565,11 @@
         <div
             style="background:white; border-radius:20px; padding:2.5rem; width:100%; max-width:600px; max-height:90vh; overflow-y:auto; position:relative;">
             <button onclick="closeModal()"
-                style="position:absolute; top:1.2rem; right:1.2rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#64748b; line-height:1;">✕</button>
+                style="position:absolute; top:1.2rem; right:1.2rem; background:none; border:none; font-size:1.5rem; cursor:pointer; color:#5a5a5a; line-height:1;">✕</button>
             <div class="center-text" style="margin-bottom:1.5rem;">
                 <span class="badge">Register Now</span>
                 <h2 style="margin:0.5rem 0 0.5rem;">Secure Your Free Seat</h2>
-                <p style="color:#64748b; font-size:0.95rem;">Registration is free but mandatory. Fill in your details to
+                <p style="color:#5a5a5a; font-size:0.95rem;">Registration is free but mandatory. Fill in your details to
                     confirm presence at the Times Study Abroad Conclave.</p>
             </div>
             <form id="registration-form" class="registration-form">
@@ -658,7 +691,9 @@
                             <a href="mailto:sagun.kumari@timesinternet.in">sagun.kumari@timesinternet.in</a>
                             <a href="tel:9304412377">+91 9304412377</a>
                         </div>
-                        <a href="awards.html" style="display: inline-block; margin-top: 1.25rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; letter-spacing: 0.02em;">View Awards Page →</a>
+                        <a href="awards.html"
+                            style="display: inline-block; margin-top: 1.25rem; font-size: 0.88rem; font-weight: 700; color: var(--primary-color); text-decoration: none; letter-spacing: 0.02em;">View
+                            Awards Page →</a>
                     </div>
                 </div>
                 <!-- Speaking Opportunity -->
@@ -713,7 +748,7 @@
         .contact-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
-            border-color: #bfdbfe;
+            border-color: #d4cce8;
         }
 
         .contact-icon {
@@ -725,7 +760,7 @@
             display: block;
             font-size: 0.75rem;
             font-weight: 700;
-            color: #3b82f6;
+            color: #54aba5;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             margin-bottom: 0.5rem;
@@ -734,7 +769,7 @@
         .contact-name {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #0f172a;
+            color: #1a1a1a;
             margin-bottom: 1.25rem;
         }
 
@@ -746,14 +781,14 @@
 
         .contact-links a {
             font-size: 0.9rem;
-            color: #64748b;
+            color: #5a5a5a;
             text-decoration: none;
             transition: color 0.2s;
             word-break: break-all;
         }
 
         .contact-links a:hover {
-            color: #3b82f6;
+            color: #54aba5;
         }
 
         @media (max-width: 600px) {
@@ -780,9 +815,9 @@
     <!-- Sticky Footer CTA -->
     <div id="sticky-footer"
         style="position:fixed; bottom:0; left:0; right:0; z-index:999; background:white; border-top:1px solid #e2e8f0; box-shadow:0 -4px 24px rgba(0,0,0,0.1); padding:0.75rem 5%; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
-        <div style="font-weight:700; color:#0f172a; font-size:1rem;">
+        <div style="font-weight:700; color:#1a1a1a; font-size:1rem;">
             <span style="color:var(--primary-color);">Times</span> Study Abroad Conclave
-            <span style="font-size:0.8rem; font-weight:500; color:#64748b; margin-left:0.75rem;">July 4, 2026 ·
+            <span style="font-size:0.8rem; font-weight:500; color:#5a5a5a; margin-left:0.75rem;">July 2026 ·
                 Shangri-La Eros, New Delhi</span>
         </div>
         <div style="display:flex; gap:0.75rem; flex-shrink:0;">
@@ -793,7 +828,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
     <!-- Inline styles for new sections (stats row, tracks grid, audience grid) -->
     <style>
@@ -915,6 +950,7 @@
 
         /* 768px — Tablets portrait */
         @media (max-width: 768px) {
+
             /* Hero */
             .hero {
                 padding: 7rem 5% 3rem;
@@ -946,19 +982,20 @@
             }
 
             /* Registration modal */
-            #register-modal > div {
+            #register-modal>div {
                 padding: 2rem 1.5rem !important;
                 margin: 0.5rem !important;
             }
 
             /* Sticky footer: hide verbose event date on small tablets */
-            #sticky-footer > div:first-child > span:last-child {
+            #sticky-footer>div:first-child>span:last-child {
                 display: none;
             }
         }
 
         /* 480px — Phones */
         @media (max-width: 480px) {
+
             /* Hero */
             .hero {
                 padding: 6rem 4% 3rem;
@@ -997,7 +1034,7 @@
             }
 
             /* Registration modal: compact */
-            #register-modal > div {
+            #register-modal>div {
                 padding: 1.5rem !important;
                 border-radius: 14px !important;
             }
@@ -1007,13 +1044,13 @@
                 padding: 0.65rem 4% !important;
             }
 
-            #sticky-footer > div:last-child {
+            #sticky-footer>div:last-child {
                 width: 100%;
                 flex-shrink: 1 !important;
             }
 
-            #sticky-footer > div:last-child a,
-            #sticky-footer > div:last-child button {
+            #sticky-footer>div:last-child a,
+            #sticky-footer>div:last-child button {
                 flex: 1;
                 text-align: center;
                 padding: 0.55rem 0.75rem !important;

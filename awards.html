@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="awards.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&family=Patrick+Hand&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&family=Patrick+Hand&display=swap"
         rel="stylesheet">
 </head>
 
@@ -19,8 +20,7 @@
 
     <!-- Navigation -->
     <nav class="navbar glass">
-        <a href="index.html" class="logo" aria-label="Times Study Abroad Conclave 2026"><img
-                src="assets/tsac-logo.png"
+        <a href="index.html" class="logo" aria-label="Times Study Abroad Conclave 2026"><img src="assets/tsac-logo.png"
                 alt="Times Study Abroad Conclave 2026"></a>
         <ul class="nav-links">
             <li><a href="index.html" style="font-weight: 700;">TSAC 2026</a></li>
@@ -47,8 +47,7 @@
         <a href="index.html#tracks">Conversation Tracks</a>
         <a href="index.html#attendees">Attend</a>
         <a href="index.html#partners">Partner</a>
-        <a href="#nominate" class="btn btn-primary"
-            style="margin-top: 0.5rem; text-align: center;">Nominate Now</a>
+        <a href="#nominate" class="btn btn-primary" style="margin-top: 0.5rem; text-align: center;">Nominate Now</a>
     </div>
 
     <!-- Exit Intent Popup -->
@@ -57,8 +56,7 @@
             <span class="close-popup">&times;</span>
             <h2>Nominations close June 20</h2>
             <p>Early bird fee of ₹35,000 + GST. Get recognised at India's most credible study abroad platform.</p>
-            <a href="#nominate" class="btn btn-gradient full-width"
-                id="btn-close-popup">Nominate Now</a>
+            <a href="#nominate" class="btn btn-gradient full-width" id="btn-close-popup">Nominate Now</a>
         </div>
     </div>
 
@@ -305,39 +303,164 @@
         </div>
     </section>
 
-    <!-- Nominate CTA -->
+    <!-- Nomination Form -->
     <section id="nominate" class="section-padding fade-in-up"
         style="background: linear-gradient(to bottom, #ffffff, #f0f7ff); border-top: 1px solid #e2e8f0;">
         <div class="container">
             <div class="section-header center-text">
                 <span class="badge" style="margin-bottom: 1rem;">Award Nominations</span>
-                <h2>Ready to Nominate?</h2>
-                <p class="lead-text">Submit your entry before June 20, 2026. Reach out to our nominations team to
-                    begin.</p>
+                <h2>Submit Your Nomination</h2>
+                <p class="lead-text">Fill in your details below. Nominations close June 20, 2026.</p>
             </div>
-            <div class="nominate-contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">🏆</div>
-                    <div class="contact-info">
-                        <span class="contact-role">Award Nominations</span>
-                        <h4 class="contact-name">Sagun Kumari</h4>
-                        <div class="contact-links">
-                            <a href="mailto:sagun.kumari@timesinternet.in">sagun.kumari@timesinternet.in</a>
-                            <a href="tel:9304412377">+91 9304412377</a>
+
+            <div class="nominate-layout">
+
+                <!-- Form -->
+                <div class="nominate-form-wrap glass-card">
+                    <form id="awards-nomination-form" novalidate>
+
+                        <div class="form-group">
+                            <label for="nom-name">Full Name <span class="req">*</span></label>
+                            <input type="text" id="nom-name" name="full_name" required placeholder="Your full name"
+                                class="form-control">
                         </div>
+
+                        <!-- Phone + OTP -->
+                        <div class="form-group">
+                            <label for="nom-phone">Phone Number <span class="req">*</span></label>
+                            <div class="otp-input-row">
+                                <input type="tel" id="nom-phone" name="phone" required
+                                    placeholder="10-digit mobile number" class="form-control" maxlength="10"
+                                    inputmode="numeric" pattern="[0-9]{10}">
+                                <button type="button" id="send-otp-btn" class="btn btn-outline otp-action-btn">Send
+                                    OTP</button>
+                            </div>
+                            <div id="otp-row" class="otp-row" style="display:none;">
+                                <input type="text" id="nom-otp" placeholder="Enter 6-digit OTP" class="form-control"
+                                    maxlength="6" inputmode="numeric" pattern="[0-9]{6}">
+                                <button type="button" id="verify-otp-btn"
+                                    class="btn btn-outline otp-action-btn">Verify</button>
+                            </div>
+                            <div id="otp-status" class="otp-status"></div>
+                            <input type="hidden" id="nom-phone-verified" name="phone_verified" value="false">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom-email">Business Email <span class="req">*</span></label>
+                            <input type="email" id="nom-email" name="email" required placeholder="you@company.com"
+                                class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom-designation">Designation <span class="req">*</span></label>
+                            <input type="text" id="nom-designation" name="designation" required
+                                placeholder="e.g. Director, Head of Admissions" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom-company">Company / Institution <span class="req">*</span></label>
+                            <input type="text" id="nom-company" name="company" required placeholder="Organisation name"
+                                class="form-control">
+                        </div>
+
+                        <!-- Consents -->
+                        <div class="form-group consent-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="nom-opt-in" name="email_whatsapp_opt_in">
+                                <span>I agree to receive updates via Email and WhatsApp about this nomination.</span>
+                            </label>
+                        </div>
+                        <div class="form-group consent-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="nom-tnc" name="tnc_accepted" required>
+                                <span>I accept the <a href="#" target="_blank">Terms &amp; Conditions</a> and
+                                    <a href="#" target="_blank">Privacy Policy</a>. <span class="req">*</span></span>
+                            </label>
+                        </div>
+
+                        <!-- Payment options -->
+                        <div class="form-group">
+                            <label class="form-label-static">Submission Option <span class="req">*</span></label>
+                            <div class="payment-options">
+                                <label class="payment-option-card" for="opt-pay-now">
+                                    <input type="radio" name="payment_option" value="pay_now" id="opt-pay-now" checked>
+                                    <div class="payment-option-inner">
+                                        <div class="payment-option-title">Pay &amp; Submit Now</div>
+                                        <div class="payment-option-pricing">
+                                            <span class="price-original">INR 40,000</span>
+                                            <span class="price-current">INR 35,000 + GST</span>
+                                            <span class="price-tag">Early Bird</span>
+                                        </div>
+                                        <div class="payment-option-note">Secure your nomination instantly</div>
+                                    </div>
+                                </label>
+                                <label class="payment-option-card" for="opt-pay-later">
+                                    <input type="radio" name="payment_option" value="pay_later" id="opt-pay-later">
+                                    <div class="payment-option-inner">
+                                        <div class="payment-option-title">Submit Now &amp; Pay Later</div>
+                                        <div class="payment-option-pricing">
+                                            <span class="price-current">INR 40,000 + GST</span>
+                                        </div>
+                                        <div class="payment-option-note">Our team will reach out for payment</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="nom-form-error" class="nom-form-error" style="display:none;"></div>
+
+                        <button type="submit" id="awards-submit-btn" class="btn btn-gradient full-width nom-submit-btn">
+                            Submit Nomination
+                        </button>
+                    </form>
+
+                    <!-- Success state -->
+                    <div id="nom-success" class="nom-success" style="display:none;">
+                        <div class="nom-success-icon">🏆</div>
+                        <h3>Nomination Submitted!</h3>
+                        <p id="nom-success-msg">Thank you. Our nominations team will be in touch shortly.</p>
                     </div>
                 </div>
-                <div class="contact-card"
-                    style="background: linear-gradient(135deg, #fffaf0, #fdf6ee); border-color: #ffd866;">
-                    <div class="contact-icon">⏰</div>
-                    <div class="contact-info">
-                        <span class="contact-role" style="color: #ffc53a;">Submission Deadline</span>
-                        <h4 class="contact-name">June 20, 2026</h4>
-                        <div style="margin-top: 0.75rem; font-size: 0.9rem; color: #5a5a5a; line-height: 1.7;">
-                            Early bird: ₹35,000 + GST<br>Standard: ₹40,000 + GST
+
+                <!-- Info sidebar -->
+                <aside class="nominate-info-panel">
+                    <div class="nom-info-card nom-deadline-card">
+                        <div class="nom-info-icon">⏰</div>
+                        <div>
+                            <div class="nom-info-label">Submission Deadline</div>
+                            <div class="nom-info-value">June 20, 2026</div>
                         </div>
                     </div>
-                </div>
+                    <div class="nom-info-card nom-pricing-card">
+                        <div class="nom-info-label">Nomination Fee</div>
+                        <div class="nom-pricing-row">
+                            <span class="nom-price-original">₹40,000</span>
+                            <span class="nom-price-current">₹35,000 + GST</span>
+                        </div>
+                        <div class="nom-pricing-note">Early bird offer — limited slots</div>
+                    </div>
+                    <div class="nom-info-card nom-contact-card">
+                        <div class="nom-info-icon">🏆</div>
+                        <div>
+                            <div class="nom-info-label">Award Nominations</div>
+                            <div class="nom-info-value">Sagun Kumari</div>
+                            <div class="contact-links" style="margin-top:0.5rem;">
+                                <a href="mailto:sagun.kumari@timesinternet.in">sagun.kumari@timesinternet.in</a>
+                                <a href="tel:9304412377">+91 9304412377</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nom-info-card nom-steps-card">
+                        <div class="nom-info-label" style="margin-bottom:0.75rem;">How it works</div>
+                        <ol class="nom-steps">
+                            <li>Fill the nomination form</li>
+                            <li>Verify your phone via OTP</li>
+                            <li>Choose your payment option</li>
+                            <li>Our team reviews &amp; confirms</li>
+                        </ol>
+                    </div>
+                </aside>
+
             </div>
         </div>
     </section>

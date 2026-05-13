@@ -422,3 +422,242 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 })();
+
+
+/* =============================================
+   AWARDS NOMINATION FORM
+   ============================================= */
+
+(function () {
+    'use strict';
+
+    /* ---- API endpoints — replace with actual URLs before go-live ---- */
+    var NOMINATION_API = {
+        SEND_OTP:    '/api/v1/otp/send',
+        VERIFY_OTP:  '/api/v1/otp/verify',
+        SUBMIT:      '/api/v1/nominations/submit'
+    };
+
+    /* ---- UTM helpers ---- */
+    function getUtmParams() {
+        var params = new URLSearchParams(window.location.search);
+        return {
+            utm_source:   params.get('utm_source')   || '',
+            utm_medium:   params.get('utm_medium')   || '',
+            utm_campaign: params.get('utm_campaign') || '',
+            utm_term:     params.get('utm_term')     || '',
+            utm_content:  params.get('utm_content')  || ''
+        };
+    }
+
+    /* ---- sso_id: read from window global or cookie ---- */
+    function getSsoId() {
+        if (window.sso_id) return window.sso_id;
+        var match = document.cookie.match(/(?:^|;\s*)sso_id=([^;]+)/);
+        return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    /* ---- DOM initialisation ---- */
+    document.addEventListener('DOMContentLoaded', function () {
+        var form        = document.getElementById('awards-nomination-form');
+        if (!form) return;
+
+        var phoneInput   = document.getElementById('nom-phone');
+        var sendOtpBtn   = document.getElementById('send-otp-btn');
+        var otpRow       = document.getElementById('otp-row');
+        var otpInput     = document.getElementById('nom-otp');
+        var verifyOtpBtn = document.getElementById('verify-otp-btn');
+        var otpStatus    = document.getElementById('otp-status');
+        var phoneVerifiedField = document.getElementById('nom-phone-verified');
+        var submitBtn    = document.getElementById('awards-submit-btn');
+        var errorBanner  = document.getElementById('nom-form-error');
+        var successPanel = document.getElementById('nom-success');
+        var successMsg   = document.getElementById('nom-success-msg');
+
+        var otpResendTimer = null;
+        var phoneVerified  = false;
+
+        /* -- OTP status helper -- */
+        function setOtpStatus(msg, type) {
+            otpStatus.textContent = msg;
+            otpStatus.className = 'otp-status ' + (type || '');
+        }
+
+        /* -- Resend countdown -- */
+        function startResendCountdown(seconds) {
+            sendOtpBtn.disabled = true;
+            var remaining = seconds;
+            sendOtpBtn.textContent = 'Resend (' + remaining + 's)';
+            otpResendTimer = setInterval(function () {
+                remaining -= 1;
+                if (remaining <= 0) {
+                    clearInterval(otpResendTimer);
+                    sendOtpBtn.disabled = false;
+                    sendOtpBtn.textContent = 'Resend OTP';
+                } else {
+                    sendOtpBtn.textContent = 'Resend (' + remaining + 's)';
+                }
+            }, 1000);
+        }
+
+        /* -- Send OTP -- */
+        sendOtpBtn.addEventListener('click', function () {
+            var phone = phoneInput.value.trim();
+            if (!/^[0-9]{10}$/.test(phone)) {
+                setOtpStatus('Enter a valid 10-digit mobile number.', 'error');
+                phoneInput.classList.add('input-error');
+                return;
+            }
+            phoneInput.classList.remove('input-error');
+            sendOtpBtn.disabled = true;
+            sendOtpBtn.textContent = 'Sending…';
+            setOtpStatus('', '');
+
+            fetch(NOMINATION_API.SEND_OTP, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ phone: phone, form_type: 'awards' })
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data && data.success) {
+                    otpRow.style.display = 'flex';
+                    phoneInput.setAttribute('readonly', 'true');
+                    setOtpStatus('OTP sent to +91 ' + phone, 'success');
+                    startResendCountdown(30);
+                } else {
+                    sendOtpBtn.disabled = false;
+                    sendOtpBtn.textContent = 'Send OTP';
+                    setOtpStatus((data && data.message) || 'Failed to send OTP. Try again.', 'error');
+                }
+            })
+            .catch(function () {
+                sendOtpBtn.disabled = false;
+                sendOtpBtn.textContent = 'Send OTP';
+                setOtpStatus('Network error. Please try again.', 'error');
+            });
+        });
+
+        /* -- Verify OTP -- */
+        verifyOtpBtn.addEventListener('click', function () {
+            var phone = phoneInput.value.trim();
+            var otp   = otpInput.value.trim();
+            if (!/^[0-9]{4,6}$/.test(otp)) {
+                setOtpStatus('Enter the OTP sent to your phone.', 'error');
+                otpInput.classList.add('input-error');
+                return;
+            }
+            otpInput.classList.remove('input-error');
+            verifyOtpBtn.disabled = true;
+            verifyOtpBtn.textContent = 'Verifying…';
+
+            fetch(NOMINATION_API.VERIFY_OTP, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ phone: phone, otp: otp, form_type: 'awards' })
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data && data.success) {
+                    phoneVerified = true;
+                    phoneVerifiedField.value = 'true';
+                    otpRow.style.display = 'none';
+                    clearInterval(otpResendTimer);
+                    sendOtpBtn.disabled = true;
+                    sendOtpBtn.textContent = '✓ Verified';
+                    sendOtpBtn.style.color = '#16a34a';
+                    sendOtpBtn.style.borderColor = '#16a34a';
+                    setOtpStatus('Phone number verified.', 'success');
+                } else {
+                    verifyOtpBtn.disabled = false;
+                    verifyOtpBtn.textContent = 'Verify';
+                    setOtpStatus((data && data.message) || 'Incorrect OTP. Try again.', 'error');
+                }
+            })
+            .catch(function () {
+                verifyOtpBtn.disabled = false;
+                verifyOtpBtn.textContent = 'Verify';
+                setOtpStatus('Network error. Please try again.', 'error');
+            });
+        });
+
+        /* -- Form submission -- */
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            /* Validation */
+            var errors = [];
+
+            var fullName    = document.getElementById('nom-name').value.trim();
+            var phone       = phoneInput.value.trim();
+            var email       = document.getElementById('nom-email').value.trim();
+            var designation = document.getElementById('nom-designation').value.trim();
+            var company     = document.getElementById('nom-company').value.trim();
+            var optIn       = document.getElementById('nom-opt-in').checked;
+            var tncAccepted = document.getElementById('nom-tnc').checked;
+            var paymentOpt  = form.querySelector('input[name="payment_option"]:checked');
+
+            if (!fullName)    errors.push('Full Name is required.');
+            if (!/^[0-9]{10}$/.test(phone)) errors.push('A valid 10-digit phone number is required.');
+            if (!phoneVerified) errors.push('Phone number must be verified via OTP.');
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.push('A valid business email is required.');
+            if (!designation) errors.push('Designation is required.');
+            if (!company)     errors.push('Company / Institution is required.');
+            if (!tncAccepted) errors.push('You must accept the Terms & Conditions and Privacy Policy.');
+            if (!paymentOpt)  errors.push('Please select a submission option.');
+
+            if (errors.length) {
+                errorBanner.textContent = errors[0];
+                errorBanner.style.display = 'block';
+                errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+
+            errorBanner.style.display = 'none';
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting…';
+
+            var payload = Object.assign({
+                form_type:             'awards',
+                full_name:             fullName,
+                phone:                 phone,
+                phone_verified:        true,
+                email:                 email,
+                designation:           designation,
+                company:               company,
+                email_whatsapp_opt_in: optIn,
+                tnc_accepted:          tncAccepted,
+                payment_option:        paymentOpt.value,
+                sso_id:                getSsoId(),
+                host_url:              window.location.href
+            }, getUtmParams());
+
+            fetch(NOMINATION_API.SUBMIT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data && data.success) {
+                    form.style.display = 'none';
+                    if (successMsg && data.message) successMsg.textContent = data.message;
+                    successPanel.style.display = 'block';
+                    successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Nomination';
+                    errorBanner.textContent = (data && data.message) || 'Submission failed. Please try again.';
+                    errorBanner.style.display = 'block';
+                }
+            })
+            .catch(function () {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Nomination';
+                errorBanner.textContent = 'Network error. Please check your connection and try again.';
+                errorBanner.style.display = 'block';
+            });
+        });
+    });
+
+}());

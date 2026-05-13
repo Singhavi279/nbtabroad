@@ -1093,6 +1093,11 @@
         flex-shrink: 0;
         scroll-snap-align: start;
     }
+
+    .nominate-layout {
+        grid-template-columns: 1fr 320px;
+        gap: 2rem;
+    }
 }
 
 /* 768px — Tablets portrait */
@@ -1141,6 +1146,30 @@
     .nominate-contact-grid {
         grid-template-columns: 1fr;
         max-width: 420px;
+    }
+
+    /* Nomination form: stack on mobile */
+    .nominate-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .nominate-form-wrap {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .nominate-info-panel {
+        order: -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .nom-steps-card {
+        grid-column: 1 / -1;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr;
     }
 
     /* Hide deadline sub-text in sticky footer */
@@ -1249,6 +1278,14 @@
         max-width: 100%;
     }
 
+    .nominate-info-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .nominate-form-wrap {
+        padding: 1.5rem 1rem;
+    }
+
     /* Sticky footer: keep both CTAs side by side */
     #sticky-footer {
         padding: 0.65rem 4% !important;
@@ -1322,6 +1359,373 @@
         font-size: 0.85rem;
     }
 }
+
+/* ============================================================
+   NOMINATION FORM
+   ============================================================ */
+
+/* Two-column layout: form | sidebar */
+.nominate-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+/* Form card */
+.nominate-form-wrap {
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.nominate-form-wrap .form-group {
+    margin-bottom: 1.25rem;
+}
+
+.nominate-form-wrap label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+    margin-bottom: 0.4rem;
+}
+
+.nominate-form-wrap .form-control {
+    width: 100%;
+    padding: 0.72rem 1rem;
+    border: 1.5px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: #1a1a1a;
+    background: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.nominate-form-wrap .form-control:focus {
+    outline: none;
+    border-color: var(--primary-color, #695ea9);
+    box-shadow: 0 0 0 3px rgba(105, 94, 169, 0.12);
+    background: #fff;
+}
+
+.nominate-form-wrap .form-control.input-error {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.nominate-form-wrap .form-control:disabled,
+.nominate-form-wrap .form-control[readonly] {
+    background: #f3f4f6;
+    color: #6b7280;
+    cursor: not-allowed;
+}
+
+.req {
+    color: #e53e3e;
+}
+
+.form-label-static {
+    display: block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1a1a1a;
+    margin-bottom: 0.6rem;
+}
+
+/* OTP row */
+.otp-input-row,
+.otp-row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.otp-input-row .form-control,
+.otp-row .form-control {
+    flex: 1;
+    min-width: 0;
+}
+
+.otp-action-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.875rem;
+    padding: 0.7rem 1.1rem;
+    border-radius: 10px;
+    border: 1.5px solid var(--primary-color, #695ea9);
+    color: var(--primary-color, #695ea9);
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.otp-action-btn:hover:not(:disabled) {
+    background: var(--primary-color, #695ea9);
+    color: #fff;
+}
+
+.otp-action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.otp-row {
+    margin-top: 0.6rem;
+}
+
+.otp-status {
+    margin-top: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    min-height: 1.2em;
+}
+
+.otp-status.success { color: #16a34a; }
+.otp-status.error   { color: #dc2626; }
+.otp-status.info    { color: #2563eb; }
+
+/* Consent checkboxes */
+.consent-group label.checkbox-label {
+    display: flex;
+    gap: 0.65rem;
+    align-items: flex-start;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #374151;
+    cursor: pointer;
+}
+
+.consent-group input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    accent-color: var(--primary-color, #695ea9);
+    cursor: pointer;
+}
+
+.consent-group a {
+    color: var(--primary-color, #695ea9);
+    text-decoration: underline;
+}
+
+/* Payment option cards */
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+.payment-option-card {
+    position: relative;
+    cursor: pointer;
+}
+
+.payment-option-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.payment-option-inner {
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.1rem 1rem;
+    background: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.payment-option-card input[type="radio"]:checked + .payment-option-inner {
+    border-color: var(--primary-color, #695ea9);
+    background: #f5f3ff;
+    box-shadow: 0 0 0 3px rgba(105, 94, 169, 0.1);
+}
+
+.payment-option-card:hover .payment-option-inner {
+    border-color: #a9a3d6;
+}
+
+.payment-option-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    margin-bottom: 0.45rem;
+}
+
+.payment-option-pricing {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.price-original {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.price-current {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.price-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #ffc53a, #e8a52a);
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+}
+
+.payment-option-note {
+    font-size: 0.78rem;
+    color: #6b7280;
+}
+
+/* Form error */
+.nom-form-error {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Submit button */
+.nom-submit-btn {
+    font-size: 1.05rem;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 0.25rem;
+}
+
+/* Success state */
+.nom-success {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.nom-success-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.nom-success h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1a1a1a;
+}
+
+.nom-success p {
+    color: #5a5a5a;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* Info sidebar */
+.nominate-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.nom-info-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.nom-deadline-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #fffaf0, #fdf6ee);
+    border-color: #ffd866;
+}
+
+.nom-info-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.nom-info-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #6b7280;
+    margin-bottom: 0.2rem;
+}
+
+.nom-info-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.nom-pricing-card {
+    background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+    border-color: #c4b5fd;
+}
+
+.nom-pricing-row {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0.5rem 0 0.3rem;
+}
+
+.nom-price-original {
+    font-size: 0.9rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+}
+
+.nom-price-current {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #5b21b6;
+}
+
+.nom-pricing-note {
+    font-size: 0.78rem;
+    color: #6b7280;
+}
+
+.nom-contact-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.nom-steps-card ol.nom-steps {
+    margin: 0;
+    padding-left: 1.25rem;
+    list-style: decimal;
+    color: #374151;
+    font-size: 0.875rem;
+    line-height: 2;
+}
+
+/* ============================================================
+   NOMINATION FORM — Responsive
+   ============================================================ */
 
 /* 360px — Small phones */
 @media (max-width: 360px) {
